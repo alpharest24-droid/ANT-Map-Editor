@@ -1,0 +1,2591 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>ANT Maps Editor</title>
+<style id="tailwind-offline">*,:after,:before{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/*! tailwindcss v3.4.19 | MIT License | https://tailwindcss.com*/*,:after,:before{box-sizing:border-box;border:0 solid #e5e7eb}:after,:before{--tw-content:""}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;-o-tab-size:4;tab-size:4;font-family:ui-sans-serif,system-ui,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0}fieldset,legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::-moz-placeholder,textarea::-moz-placeholder{opacity:1;color:#9ca3af}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.pointer-events-none{pointer-events:none}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.inset-0{inset:0}.bottom-3{bottom:.75rem}.left-1\/2{left:50%}.left-3{left:.75rem}.top-3{top:.75rem}.z-10{z-index:10}.z-20{z-index:20}.z-50{z-index:50}.z-\[9999\]{z-index:9999}.mx-1{margin-left:.25rem;margin-right:.25rem}.mb-1{margin-bottom:.25rem}.mb-2{margin-bottom:.5rem}.mb-3{margin-bottom:.75rem}.mr-1{margin-right:.25rem}.mt-1{margin-top:.25rem}.mt-2{margin-top:.5rem}.mt-3{margin-top:.75rem}.mt-4{margin-top:1rem}.block{display:block}.inline-block{display:inline-block}.flex{display:flex}.inline-flex{display:inline-flex}.table{display:table}.grid{display:grid}.hidden{display:none}.h-1\/2{height:50%}.h-2{height:.5rem}.h-3\.5{height:.875rem}.h-5{height:1.25rem}.h-full{height:100%}.h-screen{height:100vh}.max-h-\[85vh\]{max-height:85vh}.min-h-0{min-height:0}.min-h-\[1rem\]{min-height:1rem}.w-16{width:4rem}.w-2{width:.5rem}.w-20{width:5rem}.w-24{width:6rem}.w-3\.5{width:.875rem}.w-8{width:2rem}.w-80{width:20rem}.w-full{width:100%}.w-px{width:1px}.w-screen{width:100vw}.max-w-2xl{max-width:42rem}.max-w-lg{max-width:32rem}.flex-1{flex:1 1 0%}.flex-none{flex:none}.shrink-0{flex-shrink:0}.border-collapse{border-collapse:collapse}.-translate-x-1\/2{--tw-translate-x:-50%}.-translate-x-1\/2,.-translate-y-2{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.-translate-y-2{--tw-translate-y:-0.5rem}.translate-y-0{--tw-translate-y:0px}.transform,.translate-y-0{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@keyframes pulse{50%{opacity:.5}}.animate-pulse{animation:pulse 2s cubic-bezier(.4,0,.6,1) infinite}.cursor-crosshair{cursor:crosshair}.cursor-pointer{cursor:pointer}.resize-none{resize:none}.resize{resize:both}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-center{align-items:center}.justify-end{justify-content:flex-end}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:.25rem}.gap-1\.5{gap:.375rem}.gap-2{gap:.5rem}.space-y-1\.5>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.375rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.375rem*var(--tw-space-y-reverse))}.space-y-2>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.5rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.5rem*var(--tw-space-y-reverse))}.space-y-3>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.75rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.75rem*var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.overflow-x-auto{overflow-x:auto}.overflow-y-auto{overflow-y:auto}.truncate{overflow:hidden;text-overflow:ellipsis}.truncate,.whitespace-nowrap{white-space:nowrap}.rounded{border-radius:.25rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:.5rem}.rounded-md{border-radius:.375rem}.rounded-xl{border-radius:.75rem}.border{border-width:1px}.border-b{border-bottom-width:1px}.border-b-2{border-bottom-width:2px}.border-r{border-right-width:1px}.border-t{border-top-width:1px}.border-amber-400\/60{border-color:rgba(251,191,36,.6)}.border-rose-700\/50{border-color:rgba(190,18,60,.5)}.border-sky-400{--tw-border-opacity:1;border-color:rgb(56 189 248/var(--tw-border-opacity,1))}.border-slate-600{--tw-border-opacity:1;border-color:rgb(71 85 105/var(--tw-border-opacity,1))}.border-slate-700{--tw-border-opacity:1;border-color:rgb(51 65 85/var(--tw-border-opacity,1))}.border-slate-700\/60{border-color:rgba(51,65,85,.6)}.border-slate-700\/80{border-color:rgba(51,65,85,.8)}.border-slate-800{--tw-border-opacity:1;border-color:rgb(30 41 59/var(--tw-border-opacity,1))}.border-slate-800\/50{border-color:rgba(30,41,59,.5)}.border-transparent{border-color:transparent}.bg-amber-600{--tw-bg-opacity:1;background-color:rgb(217 119 6/var(--tw-bg-opacity,1))}.bg-amber-600\/30{background-color:rgba(217,119,6,.3)}.bg-black\/60{background-color:rgba(0,0,0,.6)}.bg-emerald-600\/30{background-color:rgba(5,150,105,.3)}.bg-emerald-700{--tw-bg-opacity:1;background-color:rgb(4 120 87/var(--tw-bg-opacity,1))}.bg-indigo-600{--tw-bg-opacity:1;background-color:rgb(79 70 229/var(--tw-bg-opacity,1))}.bg-indigo-700{--tw-bg-opacity:1;background-color:rgb(67 56 202/var(--tw-bg-opacity,1))}.bg-rose-600\/30{background-color:rgba(225,29,72,.3)}.bg-rose-600\/95{background-color:rgba(225,29,72,.95)}.bg-rose-700{--tw-bg-opacity:1;background-color:rgb(190 18 60/var(--tw-bg-opacity,1))}.bg-rose-900\/40{background-color:rgba(136,19,55,.4)}.bg-sky-400{--tw-bg-opacity:1;background-color:rgb(56 189 248/var(--tw-bg-opacity,1))}.bg-sky-600{--tw-bg-opacity:1;background-color:rgb(2 132 199/var(--tw-bg-opacity,1))}.bg-sky-600\/90{background-color:rgba(2,132,199,.9)}.bg-sky-600\/95{background-color:rgba(2,132,199,.95)}.bg-slate-700{--tw-bg-opacity:1;background-color:rgb(51 65 85/var(--tw-bg-opacity,1))}.bg-slate-800{--tw-bg-opacity:1;background-color:rgb(30 41 59/var(--tw-bg-opacity,1))}.bg-slate-900{--tw-bg-opacity:1;background-color:rgb(15 23 42/var(--tw-bg-opacity,1))}.bg-slate-900\/70{background-color:rgba(15,23,42,.7)}.bg-slate-900\/80{background-color:rgba(15,23,42,.8)}.bg-slate-900\/90{background-color:rgba(15,23,42,.9)}.bg-slate-950{--tw-bg-opacity:1;background-color:rgb(2 6 23/var(--tw-bg-opacity,1))}.bg-teal-600{--tw-bg-opacity:1;background-color:rgb(13 148 136/var(--tw-bg-opacity,1))}.bg-teal-700{--tw-bg-opacity:1;background-color:rgb(15 118 110/var(--tw-bg-opacity,1))}.p-1{padding:.25rem}.p-2{padding:.5rem}.p-3{padding:.75rem}.p-4{padding:1rem}.px-1{padding-left:.25rem;padding-right:.25rem}.px-1\.5{padding-left:.375rem;padding-right:.375rem}.px-2{padding-left:.5rem;padding-right:.5rem}.px-2\.5{padding-left:.625rem;padding-right:.625rem}.px-3{padding-left:.75rem;padding-right:.75rem}.px-4{padding-left:1rem;padding-right:1rem}.py-0\.5{padding-top:.125rem;padding-bottom:.125rem}.py-1{padding-top:.25rem;padding-bottom:.25rem}.py-1\.5{padding-top:.375rem;padding-bottom:.375rem}.py-2{padding-top:.5rem;padding-bottom:.5rem}.py-2\.5{padding-top:.625rem;padding-bottom:.625rem}.py-3{padding-top:.75rem;padding-bottom:.75rem}.py-4{padding-top:1rem;padding-bottom:1rem}.pb-1{padding-bottom:.25rem}.pt-1{padding-top:.25rem}.pt-2{padding-top:.5rem}.text-left{text-align:left}.text-center{text-align:center}.font-mono{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace}.text-\[11px\]{font-size:11px}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:.875rem;line-height:1.25rem}.text-xs{font-size:.75rem;line-height:1rem}.font-bold{font-weight:700}.font-medium{font-weight:500}.font-normal{font-weight:400}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.italic{font-style:italic}.leading-none{line-height:1}.text-amber-300{--tw-text-opacity:1;color:rgb(252 211 77/var(--tw-text-opacity,1))}.text-amber-400{--tw-text-opacity:1;color:rgb(251 191 36/var(--tw-text-opacity,1))}.text-emerald-300{--tw-text-opacity:1;color:rgb(110 231 183/var(--tw-text-opacity,1))}.text-emerald-400{--tw-text-opacity:1;color:rgb(52 211 153/var(--tw-text-opacity,1))}.text-indigo-300{--tw-text-opacity:1;color:rgb(165 180 252/var(--tw-text-opacity,1))}.text-indigo-400{--tw-text-opacity:1;color:rgb(129 140 248/var(--tw-text-opacity,1))}.text-rose-300{--tw-text-opacity:1;color:rgb(253 164 175/var(--tw-text-opacity,1))}.text-rose-400{--tw-text-opacity:1;color:rgb(251 113 133/var(--tw-text-opacity,1))}.text-sky-400{--tw-text-opacity:1;color:rgb(56 189 248/var(--tw-text-opacity,1))}.text-sky-500{--tw-text-opacity:1;color:rgb(14 165 233/var(--tw-text-opacity,1))}.text-slate-100{--tw-text-opacity:1;color:rgb(241 245 249/var(--tw-text-opacity,1))}.text-slate-200{--tw-text-opacity:1;color:rgb(226 232 240/var(--tw-text-opacity,1))}.text-slate-300{--tw-text-opacity:1;color:rgb(203 213 225/var(--tw-text-opacity,1))}.text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184/var(--tw-text-opacity,1))}.text-slate-500{--tw-text-opacity:1;color:rgb(100 116 139/var(--tw-text-opacity,1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}.opacity-0{opacity:0}.opacity-100{opacity:1}.shadow{--tw-shadow:0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px -1px rgba(0,0,0,.1);--tw-shadow-colored:0 1px 3px 0 var(--tw-shadow-color),0 1px 2px -1px var(--tw-shadow-color)}.shadow,.shadow-2xl{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgba(0,0,0,.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -4px rgba(0,0,0,.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color),0 4px 6px -4px var(--tw-shadow-color)}.shadow-lg,.shadow-md{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-md{--tw-shadow:0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -2px rgba(0,0,0,.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color),0 2px 4px -2px var(--tw-shadow-color)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgba(0,0,0,.1),0 8px 10px -6px rgba(0,0,0,.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color),0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.filter{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.backdrop-blur-md{--tw-backdrop-blur:blur(12px)}.backdrop-blur-md,.backdrop-blur-sm{-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.backdrop-blur-sm{--tw-backdrop-blur:blur(4px)}.transition{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,-webkit-backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-backdrop-filter;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.duration-300{transition-duration:.3s}.hover\:bg-amber-500:hover{--tw-bg-opacity:1;background-color:rgb(245 158 11/var(--tw-bg-opacity,1))}.hover\:bg-emerald-600:hover{--tw-bg-opacity:1;background-color:rgb(5 150 105/var(--tw-bg-opacity,1))}.hover\:bg-indigo-500:hover{--tw-bg-opacity:1;background-color:rgb(99 102 241/var(--tw-bg-opacity,1))}.hover\:bg-indigo-600:hover{--tw-bg-opacity:1;background-color:rgb(79 70 229/var(--tw-bg-opacity,1))}.hover\:bg-rose-600:hover{--tw-bg-opacity:1;background-color:rgb(225 29 72/var(--tw-bg-opacity,1))}.hover\:bg-rose-800\/60:hover{background-color:rgba(159,18,57,.6)}.hover\:bg-sky-500:hover{--tw-bg-opacity:1;background-color:rgb(14 165 233/var(--tw-bg-opacity,1))}.hover\:bg-slate-600:hover{--tw-bg-opacity:1;background-color:rgb(71 85 105/var(--tw-bg-opacity,1))}.hover\:bg-slate-700:hover{--tw-bg-opacity:1;background-color:rgb(51 65 85/var(--tw-bg-opacity,1))}.hover\:bg-slate-800\/40:hover{background-color:rgba(30,41,59,.4)}.hover\:bg-slate-800\/50:hover{background-color:rgba(30,41,59,.5)}.hover\:bg-teal-500:hover{--tw-bg-opacity:1;background-color:rgb(20 184 166/var(--tw-bg-opacity,1))}.hover\:bg-teal-600:hover{--tw-bg-opacity:1;background-color:rgb(13 148 136/var(--tw-bg-opacity,1))}.hover\:text-rose-300:hover{--tw-text-opacity:1;color:rgb(253 164 175/var(--tw-text-opacity,1))}.hover\:text-slate-200:hover{--tw-text-opacity:1;color:rgb(226 232 240/var(--tw-text-opacity,1))}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}.focus\:border-sky-500:focus{--tw-border-opacity:1;border-color:rgb(14 165 233/var(--tw-border-opacity,1))}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}.focus\:ring-0:focus{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow,0 0 #0000)}.focus\:ring-offset-0:focus{--tw-ring-offset-width:0px}@media (min-width:768px){.md\:h-auto{height:auto}.md\:w-\[420px\]{width:420px}.md\:flex-row{flex-direction:row}.md\:border-l{border-left-width:1px}.md\:border-t-0{border-top-width:0}}@media (min-width:1024px){.lg\:block{display:block}}</style>
+<style>
+  :root {
+    --bg-canvas: #0f172a;
+  }
+  body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    user-select: none;
+  }
+  canvas {
+    touch-action: none;
+    background-color: var(--bg-canvas);
+  }
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #1e293b;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #475569;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #64748b;
+  }
+</style>
+</head>
+<body class="bg-slate-900 text-slate-100 h-screen w-screen flex flex-col overflow-hidden">
+
+  <!-- Top Toolbar -->
+  <header id="bar" class="bg-slate-800 border-b border-slate-700 px-3 py-2 flex flex-wrap items-center justify-between gap-2 z-10 flex-none shadow-md">
+    <!-- Tools & Creation Buttons -->
+    <div class="flex flex-wrap items-center gap-1.5">
+      <!-- File Template Reset -->
+      <button id="new-json-btn" class="bg-rose-700 hover:bg-rose-600 text-white px-2.5 py-1 rounded text-xs font-semibold transition shadow flex items-center gap-1">
+        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+        Buat Baru
+      </button>
+
+      <div class="h-5 w-px bg-slate-700 mx-1"></div>
+
+      <!-- Add Element Tool Buttons -->
+      <div class="flex bg-slate-900/80 p-1 rounded-lg border border-slate-700/60 gap-1 flex-wrap">
+        <button data-t="select" class="tool-btn bg-sky-600 text-white px-2.5 py-1 rounded text-xs font-semibold hover:bg-sky-500 transition shadow">Pilih</button>
+        <button data-t="track" class="tool-btn bg-slate-800 text-slate-300 hover:text-white px-2 py-1 rounded text-xs font-medium hover:bg-slate-700 transition">+ Rel</button>
+        <button data-t="signal" class="tool-btn bg-slate-800 text-slate-300 hover:text-white px-2 py-1 rounded text-xs font-medium hover:bg-slate-700 transition">+ Sinyal</button>
+        <button data-t="switch" class="tool-btn bg-slate-800 text-slate-300 hover:text-white px-2 py-1 rounded text-xs font-medium hover:bg-slate-700 transition">+ Wesel</button>
+        <button data-t="platform" class="tool-btn bg-slate-800 text-slate-300 hover:text-white px-2 py-1 rounded text-xs font-medium hover:bg-slate-700 transition">+ Peron</button>
+        <button data-t="building" class="tool-btn bg-slate-800 text-slate-300 hover:text-white px-2 py-1 rounded text-xs font-medium hover:bg-slate-700 transition">+ Bangunan</button>
+        <button data-t="crossing" class="tool-btn bg-slate-800 text-slate-300 hover:text-white px-2 py-1 rounded text-xs font-medium hover:bg-slate-700 transition">+ JPL</button>
+        <button id="add-station-btn" class="bg-indigo-700 hover:bg-indigo-600 text-white px-2.5 py-1 rounded text-xs font-medium transition flex items-center gap-1">+ Stasiun</button>
+      </div>
+
+      <div class="h-5 w-px bg-slate-700 mx-1 hidden lg:block"></div>
+
+      <!-- Copy / Paste Buttons -->
+      <div class="flex items-center gap-1">
+        <button id="copy-btn" class="bg-slate-700 hover:bg-slate-600 text-slate-200 border border-slate-600 px-2.5 py-1 rounded text-xs font-medium transition flex items-center gap-1" title="Copy (Ctrl+C)">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+          Salin
+        </button>
+        <button id="paste-btn" class="bg-slate-700 hover:bg-slate-600 text-slate-200 border border-slate-600 px-2.5 py-1 rounded text-xs font-medium transition flex items-center gap-1" title="Paste (Ctrl+V)">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path></svg>
+          Tempel
+        </button>
+      </div>
+
+      <div class="h-5 w-px bg-slate-700 mx-1 hidden lg:block"></div>
+
+      <!-- Action Buttons -->
+      <div class="flex items-center gap-1">
+        <button id="del" class="bg-rose-900/40 text-rose-300 hover:bg-rose-800/60 hover:text-white border border-rose-700/50 px-2.5 py-1 rounded text-xs font-medium transition flex items-center gap-1">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path></svg>
+          Hapus
+        </button>
+        <button id="undo" class="bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white border border-slate-700 px-2.5 py-1 rounded text-xs font-medium transition flex items-center gap-1">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h10a8 8 0 018 8v2M3 10l6 6m-6-6l6-6"></path></svg>
+          Urungkan
+        </button>
+        <button id="compile-btn" class="bg-amber-600 hover:bg-amber-500 text-white border border-amber-400/60 px-2.5 py-1 rounded text-xs font-semibold transition shadow flex items-center gap-1" title="Cek error &amp; rapikan urutan Start/End track">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3l14 9-14 9V3z"></path></svg>
+          Compile
+        </button>
+        <button id="fit" class="bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white border border-slate-700 px-2.5 py-1 rounded text-xs font-medium transition flex items-center gap-1">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-2V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"></path></svg>
+          Pas Layar
+        </button>
+      </div>
+    </div>
+
+    <!-- Right File I/O Controls -->
+    <div class="flex items-center gap-2">
+      <button id="rotate-btn" class="bg-slate-700 hover:bg-slate-600 text-slate-100 border border-slate-600 px-2.5 py-1 rounded text-xs font-medium transition shadow flex items-center gap-1" title="Putar pratinjau 90° seperti tampilan game (data tidak berubah)">
+        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h5M20 20v-5h-5M5.6 15A8 8 0 0018.4 9M18.4 9L15 9M5.6 15H9"></path></svg>
+        Putar 90°
+      </button>
+      <label class="inline-flex items-center gap-1.5 cursor-pointer text-xs text-slate-300 hover:text-white mr-1">
+        <input type="checkbox" id="ids" checked class="rounded bg-slate-900 border-slate-700 text-sky-500 focus:ring-0 focus:ring-offset-0">
+        ID
+      </label>
+
+      <label class="inline-flex items-center gap-1.5 cursor-pointer text-xs text-slate-300 hover:text-white mr-1">
+        <input type="checkbox" id="grid-toggle" checked class="rounded bg-slate-900 border-slate-700 text-sky-500 focus:ring-0 focus:ring-offset-0">
+        Grid (0.01)
+      </label>
+
+      <label class="cursor-pointer bg-slate-700 hover:bg-slate-600 text-slate-100 px-2.5 py-1 rounded text-xs font-medium transition shadow flex items-center gap-1">
+        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"></path></svg>
+        Buka .antd / .json
+        <input type="file" id="file" accept=".antd, .ants, .json, application/json" class="hidden">
+      </label>
+
+      <label class="cursor-pointer bg-teal-700 hover:bg-teal-600 text-white px-2.5 py-1 rounded text-xs font-medium transition shadow flex items-center gap-1" title="Buka jadwal (.ants) untuk peta yang sedang aktif">
+        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"></path></svg>
+        Buka .ants (jadwal)
+        <input type="file" id="file-ants" accept=".ants" class="hidden">
+      </label>
+
+      <button id="download-antd-btn" class="bg-amber-600 hover:bg-amber-500 text-white px-2.5 py-1 rounded text-xs font-semibold transition shadow flex items-center gap-1">
+        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+        Simpan .antd (maps)
+      </button>
+
+      <button id="download-ants-btn" class="bg-teal-600 hover:bg-teal-500 text-white px-2.5 py-1 rounded text-xs font-semibold transition shadow flex items-center gap-1">
+  Simpan .ants (jadwal)
+</button>
+
+      <button id="download-json-btn" class="bg-emerald-700 hover:bg-emerald-600 text-white px-2.5 py-1 rounded text-xs font-medium transition shadow flex items-center gap-1">
+        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+        Simpan .json
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Viewport -->
+  <div id="main" class="flex-1 flex flex-col md:flex-row min-h-0 relative">
+
+    <!-- Canvas Area -->
+    <div id="cvw" class="flex-1 relative min-h-0 bg-slate-950">
+      <canvas id="cv" class="w-full h-full block cursor-crosshair"></canvas>
+
+      <!-- Status Overlay -->
+      <div id="st" class="absolute left-3 bottom-3 bg-slate-900/90 backdrop-blur-md text-slate-200 border border-slate-700/80 px-3 py-1.5 rounded-md text-xs shadow-lg pointer-events-none flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-sky-400 inline-block animate-pulse"></span>
+        <span id="st-text">Pilih/geser objek, geser kanvas, cubit untuk zoom</span>
+      </div>
+
+      <!-- Toast Feedback Popup -->
+      <div id="toast" class="absolute top-3 left-1/2 -translate-x-1/2 bg-sky-600/90 backdrop-blur-md text-white font-medium px-3 py-1.5 rounded-full text-xs shadow-xl transition-all duration-300 opacity-0 pointer-events-none transform -translate-y-2">
+        Feedback Text
+      </div>
+    </div>
+
+    <!-- Side Panel -->
+    <div id="side" class="h-1/2 md:h-auto md:w-[420px] bg-slate-800 border-t md:border-t-0 md:border-l border-slate-700 flex flex-col min-h-0 shadow-2xl">
+
+      <!-- Panel Tabs -->
+      <div id="tabs" class="flex bg-slate-900/80 border-b border-slate-700 flex-none overflow-x-auto">
+        <button data-p="pp" class="tab-btn py-2.5 px-3 text-xs font-semibold text-sky-400 border-b-2 border-sky-400 transition hover:bg-slate-800/50 whitespace-nowrap">Properti</button>
+        <button data-p="sc" class="tab-btn py-2.5 px-3 text-xs font-semibold text-slate-400 border-b-2 border-transparent transition hover:text-slate-200 hover:bg-slate-800/50 whitespace-nowrap">Jadwal KA</button>
+        <button data-p="rk" class="tab-btn py-2.5 px-3 text-xs font-semibold text-slate-400 border-b-2 border-transparent transition hover:text-slate-200 hover:bg-slate-800/50 whitespace-nowrap">Rakes Standby</button>
+        <button data-p="sn" class="tab-btn py-2.5 px-3 text-xs font-semibold text-slate-400 border-b-2 border-transparent transition hover:text-slate-200 hover:bg-slate-800/50 whitespace-nowrap">Kamus Stasiun</button>
+        <button data-p="wm" class="tab-btn py-2.5 px-3 text-xs font-semibold text-slate-400 border-b-2 border-transparent transition hover:text-slate-200 hover:bg-slate-800/50 whitespace-nowrap">Author</button>
+        <button data-p="js" class="tab-btn py-2.5 px-3 text-xs font-semibold text-slate-400 border-b-2 border-transparent transition hover:text-slate-200 hover:bg-slate-800/50 whitespace-nowrap">Kode JSON</button>
+      </div>
+
+      <!-- Tab 1: Properti -->
+      <div class="pane active flex-1 overflow-y-auto p-3 space-y-3" id="pp">
+        <!-- Dynamic Content via JS -->
+      </div>
+
+      <!-- Tab 2: Schedules -->
+      <div class="pane hidden flex-1 overflow-y-auto p-3" id="sc">
+        <!-- Dynamic Content via JS -->
+      </div>
+
+      <!-- Tab 3: Rakes (Rangkaian Standby) -->
+      <div class="pane hidden flex-1 overflow-y-auto p-3" id="rk">
+        <!-- Dynamic Content via JS -->
+      </div>
+
+      <!-- Tab 4: Kamus Stasiun (station_names) -->
+      <div class="pane hidden flex-1 overflow-y-auto p-3" id="sn">
+        <!-- Dynamic Content via JS -->
+      </div>
+
+      <!-- Tab 6: Watermark -->
+      <div class="pane hidden flex-1 overflow-y-auto p-3" id="wm">
+        <!-- Dynamic Content via JS -->
+      </div>
+
+      <!-- Tab 5: JSON Textarea -->
+      <div class="pane hidden flex-1 flex flex-col p-3 space-y-2" id="js">
+        <div class="flex items-center justify-between gap-2">
+          <div class="flex gap-1.5">
+            <button id="apply" class="bg-sky-600 hover:bg-sky-500 text-white px-2.5 py-1 rounded text-xs font-medium transition shadow">Terapkan JSON</button>
+            <button id="copy" class="bg-slate-700 hover:bg-slate-600 text-slate-200 px-2.5 py-1 rounded text-xs font-medium transition">Salin</button>
+          </div>
+          <span id="msg" class="text-xs font-semibold text-emerald-400"></span>
+        </div>
+        <textarea id="ta" spellcheck="false" class="flex-1 w-full bg-slate-950 border border-slate-700 rounded p-2 text-xs font-mono text-emerald-400 focus:outline-none focus:border-sky-500 resize-none"></textarea>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Compile Result Modal -->
+  <div id="compile-modal" class="hidden fixed inset-0 z-50 bg-black/60 backdrop-blur-sm items-center justify-center p-3">
+    <div class="bg-slate-800 border border-slate-600 rounded-xl shadow-2xl w-full max-w-lg max-h-[85vh] flex flex-col">
+      <div class="flex items-center justify-between px-4 py-3 border-b border-slate-700 flex-none">
+        <div class="font-semibold text-sm text-slate-100">Hasil Compile</div>
+        <button id="compile-close" class="text-slate-400 hover:text-white text-lg leading-none px-1">&times;</button>
+      </div>
+      <div id="compile-summary" class="px-4 py-2 text-xs flex flex-wrap gap-2 border-b border-slate-700 flex-none"></div>
+      <div id="compile-body" class="flex-1 overflow-y-auto px-4 py-3 space-y-1.5 text-xs min-h-0"></div>
+      <div class="px-4 py-2.5 border-t border-slate-700 flex justify-end gap-2 flex-none">
+        <button id="compile-rerun" class="bg-slate-700 hover:bg-slate-600 text-slate-100 px-3 py-1 rounded text-xs font-medium">Compile Ulang</button>
+        <button id="compile-ok" class="bg-sky-600 hover:bg-sky-500 text-white px-3 py-1 rounded text-xs font-semibold">Tutup</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Legs Schedule Modal -->
+  <div id="legs-modal" class="hidden fixed inset-0 z-50 bg-black/60 backdrop-blur-sm items-center justify-center p-3">
+    <div class="bg-slate-800 border border-slate-600 rounded-xl shadow-2xl w-full max-w-2xl max-h-[85vh] flex flex-col">
+      <div class="flex items-center justify-between px-4 py-3 border-b border-slate-700 flex-none">
+        <div id="legs-title" class="font-semibold text-sm text-slate-100">Pengaturan Legs Kereta</div>
+        <button id="legs-close" class="text-slate-400 hover:text-white text-lg leading-none px-1">&times;</button>
+      </div>
+      <div id="legs-body" class="flex-1 overflow-y-auto p-4 space-y-3 min-h-0"></div>
+      <div class="px-4 py-2.5 border-t border-slate-700 flex justify-between items-center flex-none">
+        <button id="legs-add-btn" class="bg-indigo-600 hover:bg-indigo-500 text-white px-3 py-1 rounded text-xs font-medium">+ Tambah Leg</button>
+        <button id="legs-ok" class="bg-sky-600 hover:bg-sky-500 text-white px-3 py-1 rounded text-xs font-semibold">Selesai</button>
+      </div>
+    </div>
+  </div>
+
+<script>
+const $=s=>document.querySelector(s);
+const cv=$('#cv'), ctx=cv.getContext('2d');
+
+// Data Default Lengkap (CNK - CN - CNP)
+let D = {
+  "station_name": "LG-BMA",
+  "author": "Alpharest Studio",
+  "startTime": "16:46",
+  "endTime": "17:00",
+  "stations": [
+    { "code": "LG", "name": "Linggapura" },
+    { "code": "BMA", "name": "Bumiayu" }
+  ],
+  "tracks": [
+    { "id": 1, "length": 435, "speed": 30, "startX": 0.4, "startY": 0.3, "endX": 0.4, "endY": 0.5, "type": "MAIN" },
+    { "id": 2, "length": 435, "speed": 50, "startX": 0.5, "startY": 0.3, "endX": 0.5, "endY": 0.5, "type": "MAIN" },
+    { "id": 3, "length": 435, "speed": 50, "startX": 0.6, "startY": 0.3, "endX": 0.6, "endY": 0.5, "type": "MAIN" },
+    { "id": 4, "length": 435, "speed": 30, "startX": 0.7, "startY": 0.3, "endX": 0.7, "endY": 0.5, "type": "MAIN" },
+    { "id": 5, "length": 80, "speed": 50, "startX": 0.5, "startY": 0.2, "endX": 0.5, "endY": 0.3, "type": "SWITCH" },
+    { "id": 6, "length": 80, "speed": 50, "startX": 0.6, "startY": 0.2, "endX": 0.6, "endY": 0.3, "type": "SWITCH" },
+    { "id": 7, "length": 84, "speed": 30, "startX": 0.5, "startY": 0.2, "endX": 0.4, "endY": 0.3, "type": "SWITCH" },
+    { "id": 8, "length": 84, "speed": 30, "startX": 0.6, "startY": 0.2, "endX": 0.7, "endY": 0.3, "type": "SWITCH" },
+    { "id": 9, "length": 230, "speed": 50, "startX": 0.5, "startY": 0.1, "endX": 0.5, "endY": 0.2, "type": "MAIN" },
+    { "id": 10, "length": 230, "speed": 50, "startX": 0.6, "startY": 0.1, "endX": 0.6, "endY": 0.2, "type": "MAIN" },
+    { "id": 11, "length": 100, "speed": 30, "startX": 0.5, "startY": 0, "endX": 0.6, "endY": 0.1, "type": "SWITCH" },
+    { "id": 12, "length": 60, "speed": 50, "startX": 0.5, "startY": 0, "endX": 0.5, "endY": 0.1, "type": "MAIN" },
+    { "id": 13, "length": 100, "speed": 50, "startX": 0.6, "startY": 0, "endX": 0.6, "endY": 0.1, "type": "MAIN" },
+    { "id": 14, "length": 160, "speed": 50, "startX": 0.6, "startY": -0.1, "endX": 0.6, "endY": 0, "type": "MAIN" },
+    { "id": 15, "length": 160, "speed": 50, "startX": 0.5, "startY": -0.1, "endX": 0.5, "endY": 0, "type": "MAIN" },
+    { "id": 16, "length": 80, "speed": 30, "startX": 0.7, "startY": 0.2, "endX": 0.7, "endY": 0.3, "type": "MAIN", "buffer": true },
+    { "id": 17, "length": 500, "speed": 60, "startX": 0.5, "startY": -0.2, "endX": 0.5, "endY": -0.1, "type": "MAIN" },
+    { "id": 18, "length": 500, "speed": 60, "startX": 0.6, "startY": -0.2, "endX": 0.6, "endY": -0.1, "type": "MAIN" },
+    { "id": 19, "length": 500, "speed": 60, "startX": 0.6, "startY": -0.3, "endX": 0.6, "endY": -0.2, "type": "MAIN" },
+    { "id": 20, "length": 500, "speed": 60, "startX": 0.5, "startY": -0.3, "endX": 0.5, "endY": -0.2, "type": "MAIN" },
+    { "id": 21, "length": 500, "speed": 60, "startX": 0.5, "startY": -0.4, "endX": 0.5, "endY": -0.3, "type": "MAIN" },
+    { "id": 22, "length": 500, "speed": 60, "startX": 0.6, "startY": -0.4, "endX": 0.6, "endY": -0.3, "type": "MAIN" },
+    { "id": 23, "length": 500, "speed": 60, "startX": 0.5, "startY": -0.5, "endX": 0.5, "endY": -0.4, "type": "MAIN" },
+    { "id": 24, "length": 500, "speed": 60, "startX": 0.6, "startY": -0.5, "endX": 0.6, "endY": -0.4, "type": "MAIN" },
+    { "id": 25, "length": 500, "speed": 60, "startX": 0.5, "startY": -0.6, "endX": 0.5, "endY": -0.5, "type": "MAIN" },
+    { "id": 26, "length": 500, "speed": 60, "startX": 0.6, "startY": -0.6, "endX": 0.6, "endY": -0.5, "type": "MAIN" },
+    { "id": 27, "length": 500, "speed": 60, "startX": 0.5, "startY": -0.7, "endX": 0.5, "endY": -0.6, "type": "MAIN" },
+    { "id": 28, "length": 500, "speed": 60, "startX": 0.6, "startY": -0.7, "endX": 0.6, "endY": -0.6, "type": "MAIN" },
+    { "id": 29, "length": 500, "speed": 60, "startX": 0.5, "startY": -0.8, "endX": 0.5, "endY": -0.7, "type": "MAIN" },
+    { "id": 30, "length": 500, "speed": 60, "startX": 0.6, "startY": -0.8, "endX": 0.6, "endY": -0.7, "type": "MAIN" },
+    { "id": 31, "length": 500, "speed": 60, "startX": 0.5, "startY": -0.9, "endX": 0.5, "endY": -0.8, "type": "MAIN" },
+    { "id": 32, "length": 500, "speed": 60, "startX": 0.6, "startY": -0.9, "endX": 0.6, "endY": -0.8, "type": "MAIN" },
+    { "id": 33, "length": 500, "speed": 60, "startX": 0.5, "startY": -1, "endX": 0.5, "endY": -0.9, "type": "MAIN" },
+    { "id": 34, "length": 500, "speed": 60, "startX": 0.6, "startY": -1, "endX": 0.6, "endY": -0.9, "type": "MAIN" },
+    { "id": 35, "length": 500, "speed": 60, "startX": 0.5, "startY": -1.1, "endX": 0.5, "endY": -1, "type": "MAIN" },
+    { "id": 36, "length": 500, "speed": 60, "startX": 0.6, "startY": -1.1, "endX": 0.6, "endY": -1, "type": "MAIN" },
+    { "id": 37, "length": 500, "speed": 60, "startX": 0.5, "startY": -1.2, "endX": 0.5, "endY": -1.1, "type": "MAIN" },
+    { "id": 38, "length": 500, "speed": 60, "startX": 0.6, "startY": -1.2, "endX": 0.6, "endY": -1.1, "type": "MAIN" },
+    { "id": 39, "length": 500, "speed": 60, "startX": 0.5, "startY": -1.3, "endX": 0.5, "endY": -1.2, "type": "MAIN" },
+    { "id": 40, "length": 500, "speed": 60, "startX": 0.6, "startY": -1.3, "endX": 0.6, "endY": -1.2, "type": "MAIN" },
+    { "id": 41, "length": 500, "speed": 60, "startX": 0.5, "startY": -1.4, "endX": 0.5, "endY": -1.3, "type": "MAIN" },
+    { "id": 42, "length": 500, "speed": 60, "startX": 0.6, "startY": -1.4, "endX": 0.6, "endY": -1.3, "type": "MAIN" },
+    { "id": 43, "length": 350, "speed": 50, "startX": 0.5, "startY": -1.5, "endX": 0.5, "endY": -1.4, "type": "MAIN" },
+    { "id": 44, "length": 350, "speed": 50, "startX": 0.6, "startY": -1.5, "endX": 0.6, "endY": -1.4, "type": "MAIN" },
+    { "id": 45, "length": 80, "speed": 30, "startX": 0.5, "startY": -1.6, "endX": 0.6, "endY": -1.5, "type": "MAIN" },
+    { "id": 46, "length": 98, "speed": 50, "startX": 0.5, "startY": -1.6, "endX": 0.5, "endY": -1.5, "type": "MAIN" },
+    { "id": 47, "length": 42, "speed": 50, "startX": 0.6, "startY": -1.54, "endX": 0.6, "endY": -1.5, "type": "MAIN" },
+    { "id": 49, "length": 37, "speed": 30, "startX": 0.7, "startY": -1.65, "endX": 0.6, "endY": -1.54, "type": "MAIN" },
+    { "id": 50, "length": 40, "speed": 30, "startX": 0.8, "startY": -1.75, "endX": 0.7, "endY": -1.65, "type": "MAIN" },
+    { "id": 51, "length": 40, "speed": 30, "startX": 0.7, "startY": -1.75, "endX": 0.7, "endY": -1.65, "type": "MAIN" },
+    { "id": 53, "length": 60, "speed": 50, "startX": 0.5, "startY": -1.75, "endX": 0.5, "endY": -1.6, "type": "MAIN" },
+    { "id": 54, "length": 64, "speed": 30, "startX": 0.4, "startY": -1.7, "endX": 0.5, "endY": -1.6, "type": "MAIN" },
+    { "id": 56, "length": 75, "speed": 50, "startX": 0.6, "startY": -1.75, "endX": 0.6, "endY": -1.54, "type": "MAIN" },
+    { "id": 57, "length": 330, "speed": 30, "startX": 0.4, "startY": -1.95, "endX": 0.4, "endY": -1.7, "type": "MAIN" },
+    { "id": 58, "length": 330, "speed": 50, "startX": 0.5, "startY": -1.95, "endX": 0.5, "endY": -1.75, "type": "MAIN" },
+    { "id": 59, "length": 330, "speed": 50, "startX": 0.6, "startY": -1.95, "endX": 0.6, "endY": -1.75, "type": "MAIN" },
+    { "id": 60, "length": 330, "speed": 30, "startX": 0.7, "startY": -1.95, "endX": 0.7, "endY": -1.75, "type": "MAIN" },
+    { "id": 61, "length": 100, "speed": 30, "startX": 0.8, "startY": -1.8, "endX": 0.8, "endY": -1.75, "type": "MAIN", "buffer": true },
+    { "id": 62, "length": 58, "speed": 50, "startX": 0.5, "startY": -2.05, "endX": 0.5, "endY": -1.95, "type": "MAIN" },
+    { "id": 63, "length": 58, "speed": 50, "startX": 0.6, "startY": -2.05, "endX": 0.6, "endY": -1.95, "type": "MAIN" },
+    { "id": 64, "length": 60, "speed": 30, "startX": 0.5, "startY": -2.05, "endX": 0.4, "endY": -1.95, "type": "MAIN" },
+    { "id": 65, "length": 60, "speed": 30, "startX": 0.6, "startY": -2.05, "endX": 0.7, "endY": -1.95, "type": "MAIN" },
+    { "id": 66, "length": 62, "speed": 30, "startX": 0.6, "startY": -2.15, "endX": 0.5, "endY": -2.05, "type": "MAIN" },
+    { "id": 67, "length": 60, "speed": 50, "startX": 0.5, "startY": -2.15, "endX": 0.5, "endY": -2.05, "type": "MAIN" },
+    { "id": 68, "length": 60, "speed": 50, "startX": 0.6, "startY": -2.15, "endX": 0.6, "endY": -2.05, "type": "MAIN" },
+    { "id": 69, "length": 320, "speed": 50, "startX": 0.5, "startY": -2.25, "endX": 0.5, "endY": -2.15, "type": "MAIN" },
+    { "id": 70, "length": 320, "speed": 50, "startX": 0.6, "startY": -2.25, "endX": 0.6, "endY": -2.15, "type": "MAIN" },
+    { "id": 71, "length": 250, "speed": 50, "startX": 0.5, "startY": -2.4, "endX": 0.5, "endY": -2.25, "type": "MAIN" },
+    { "id": 72, "length": 250, "speed": 50, "startX": 0.6, "startY": -2.4, "endX": 0.6, "endY": -2.25, "type": "MAIN" },
+    { "id": 73, "length": 100, "speed": 30, "startX": 0.5, "startY": -2.45, "endX": 0.5, "endY": -2.4, "type": "SPAWN" },
+    { "id": 74, "length": 100, "speed": 30, "startX": 0.6, "startY": -2.45, "endX": 0.6, "endY": -2.4, "type": "END" },
+    { "id": 75, "length": 70, "speed": 50, "startX": 0.5, "startY": 0.5, "endX": 0.5, "endY": 0.6, "type": "MAIN" },
+    { "id": 76, "length": 70, "speed": 50, "startX": 0.6, "startY": 0.5, "endX": 0.6, "endY": 0.6, "type": "MAIN" },
+    { "id": 77, "length": 70, "speed": 30, "startX": 0.4, "startY": 0.5, "endX": 0.5, "endY": 0.6, "type": "MAIN" },
+    { "id": 78, "length": 70, "speed": 30, "startX": 0.7, "startY": 0.5, "endX": 0.6, "endY": 0.6, "type": "MAIN" },
+    { "id": 79, "length": 65, "speed": 30, "startX": 0.6, "startY": 0.6, "endX": 0.5, "endY": 0.7, "type": "MAIN" },
+    { "id": 80, "length": 65, "speed": 50, "startX": 0.5, "startY": 0.6, "endX": 0.5, "endY": 0.7, "type": "MAIN" },
+    { "id": 81, "length": 65, "speed": 50, "startX": 0.6, "startY": 0.6, "endX": 0.6, "endY": 0.7, "type": "MAIN" },
+    { "id": 82, "length": 200, "speed": 40, "startX": 0.5, "startY": 0.7, "endX": 0.5, "endY": 0.8, "type": "MAIN" },
+    { "id": 83, "length": 200, "speed": 40, "startX": 0.6, "startY": 0.7, "endX": 0.6, "endY": 0.8, "type": "MAIN" },
+    { "id": 84, "length": 950, "speed": 50, "startX": 0.6, "startY": 0.8, "endX": 0.6, "endY": 0.9, "type": "MAIN", "dir": "REVERSE" },
+    { "id": 85, "length": 950, "speed": 50, "startX": 0.5, "startY": 0.8, "endX": 0.5, "endY": 0.9, "type": "MAIN", "dir": "NORMAL" },
+    { "id": 86, "length": 100, "speed": 30, "startX": 0.6, "startY": 0.9, "endX": 0.6, "endY": 0.95, "type": "SPAWN" },
+    { "id": 87, "length": 100, "speed": 30, "startX": 0.5, "startY": 0.9, "endX": 0.5, "endY": 0.95, "type": "END" }
+  ],
+  "switches": [
+    { "id": "W1-BMA", "x": 0.54, "y": 0.01, "normal": 12, "diverge": 11, "state": "NORMAL" },
+    { "id": "W1-LG", "x": 0.62, "y": -2.14, "normal": 68, "diverge": 66, "state": "NORMAL" },
+    { "id": "W2-LG", "x": 0.54, "y": -2.06, "normal": 67, "diverge": 66, "state": "NORMAL" },
+    { "id": "W3-LG", "x": 0.52, "y": -2.04, "normal": 62, "diverge": 64, "state": "NORMAL" },
+    { "id": "W4-LG", "x": 0.64, "y": -2.04, "normal": 63, "diverge": 65, "state": "NORMAL" },
+    { "id": "W2-BMA", "x": 0.62, "y": 0.09, "normal": 13, "diverge": 11, "state": "NORMAL" },
+    { "id": "W5-BMA", "x": 0.72, "y": 0.28, "normal": 8, "diverge": 16, "state": "NORMAL" },
+    { "id": "W3-BMA", "x": 0.64, "y": 0.21, "normal": 6, "diverge": 8, "state": "NORMAL" },
+    { "id": "W4-BMA", "x": 0.52, "y": 0.21, "normal": 5, "diverge": 7, "state": "NORMAL" },
+    { "id": "W6-BMA", "x": 0.52, "y": 0.59, "normal": 75, "diverge": 77, "state": "NORMAL" },
+    { "id": "W9-BMA", "x": 0.64, "y": 0.59, "normal": 76, "diverge": 78, "state": "NORMAL" },
+    { "id": "W7-BMA", "x": 0.62, "y": 0.61, "normal": 81, "diverge": 79, "state": "NORMAL" },
+    { "id": "W8-BMA", "x": 0.54, "y": 0.69, "normal": 80, "diverge": 79, "state": "NORMAL" },
+    { "id": "W6-LG", "x": 0.52, "y": -1.61, "normal": 53, "diverge": 54, "state": "NORMAL" },
+    { "id": "W7-LG", "x": 0.54, "y": -1.59, "normal": 46, "diverge": 45, "state": "NORMAL" },
+    { "id": "W8-LG", "x": 0.64, "y": -1.55, "normal": 56, "diverge": 49, "state": "NORMAL" },
+    { "id": "W9-LG", "x": 0.62, "y": -1.51, "normal": 47, "diverge": 45, "state": "NORMAL" },
+    { "id": "W5-LG", "x": 0.68, "y": -1.66, "normal": 51, "diverge": 50, "state": "NORMAL" }
+  ],
+  "signals": [
+    { "id": "S1", "x": 0.62, "y": -0.1, "state": "GREEN", "onTrack": 14, "facing": "REVERSE", "type": "BLOCK" },
+    { "id": "SE1-BMA", "x": 0.48, "y": -0.1, "state": "RED", "onTrack": 17, "facing": "NORMAL", "type": "ENTRY" },
+    { "id": "SE2-LG", "x": 0.62, "y": -1.4, "state": "RED", "onTrack": 42, "facing": "REVERSE", "type": "ENTRY" },
+    { "id": "S4", "x": 0.62, "y": -0.2, "state": "GREEN", "onTrack": 18, "facing": "REVERSE", "type": "BLOCK" },
+    { "id": "S5", "x": 0.62, "y": -0.3, "state": "GREEN", "onTrack": 19, "facing": "REVERSE", "type": "BLOCK" },
+    { "id": "S6", "x": 0.62, "y": -0.4, "state": "GREEN", "onTrack": 22, "facing": "REVERSE", "type": "BLOCK" },
+    { "id": "S7", "x": 0.62, "y": -0.5, "state": "GREEN", "onTrack": 24, "facing": "REVERSE", "type": "BLOCK" },
+    { "id": "S8", "x": 0.62, "y": -0.6, "state": "GREEN", "onTrack": 26, "facing": "REVERSE", "type": "BLOCK" },
+    { "id": "S9", "x": 0.62, "y": -0.7, "state": "GREEN", "onTrack": 28, "facing": "REVERSE", "type": "BLOCK" },
+    { "id": "S10", "x": 0.62, "y": -0.8, "state": "GREEN", "onTrack": 30, "facing": "REVERSE", "type": "BLOCK" },
+    { "id": "S11", "x": 0.62, "y": -0.9, "state": "GREEN", "onTrack": 32, "facing": "REVERSE", "type": "BLOCK" },
+    { "id": "S12", "x": 0.62, "y": -1, "state": "GREEN", "onTrack": 34, "facing": "REVERSE", "type": "BLOCK" },
+    { "id": "S13", "x": 0.62, "y": -1.1, "state": "GREEN", "onTrack": 36, "facing": "REVERSE", "type": "BLOCK" },
+    { "id": "S14", "x": 0.62, "y": -1.2, "state": "GREEN", "onTrack": 38, "facing": "REVERSE", "type": "BLOCK" },
+    { "id": "S15", "x": 0.62, "y": -1.3, "state": "GREEN", "onTrack": 40, "facing": "REVERSE", "type": "BLOCK" },
+    { "id": "S16", "x": 0.48, "y": -1.4, "state": "GREEN", "onTrack": 43, "facing": "NORMAL", "type": "BLOCK" },
+    { "id": "S17", "x": 0.48, "y": -1.3, "state": "GREEN", "onTrack": 41, "facing": "NORMAL", "type": "BLOCK" },
+    { "id": "S18", "x": 0.48, "y": -1.2, "state": "GREEN", "onTrack": 39, "facing": "NORMAL", "type": "BLOCK" },
+    { "id": "S19", "x": 0.48, "y": -1.1, "state": "GREEN", "onTrack": 37, "facing": "NORMAL", "type": "BLOCK" },
+    { "id": "S20", "x": 0.48, "y": -1, "state": "GREEN", "onTrack": 35, "facing": "NORMAL", "type": "BLOCK" },
+    { "id": "S21", "x": 0.48, "y": -0.9, "state": "GREEN", "onTrack": 33, "facing": "NORMAL", "type": "BLOCK" },
+    { "id": "S22", "x": 0.48, "y": -0.8, "state": "GREEN", "onTrack": 31, "facing": "NORMAL", "type": "BLOCK" },
+    { "id": "S23", "x": 0.48, "y": -0.7, "state": "GREEN", "onTrack": 29, "facing": "NORMAL", "type": "BLOCK" },
+    { "id": "S24", "x": 0.48, "y": -0.6, "state": "GREEN", "onTrack": 27, "facing": "NORMAL", "type": "BLOCK" },
+    { "id": "S25", "x": 0.48, "y": -0.5, "state": "GREEN", "onTrack": 25, "facing": "NORMAL", "type": "BLOCK" },
+    { "id": "S26", "x": 0.48, "y": -0.4, "state": "GREEN", "onTrack": 23, "facing": "NORMAL", "type": "BLOCK" },
+    { "id": "S27", "x": 0.48, "y": -0.3, "state": "GREEN", "onTrack": 21, "facing": "NORMAL", "type": "BLOCK" },
+    { "id": "S28", "x": 0.48, "y": -0.2, "state": "GREEN", "onTrack": 20, "facing": "NORMAL", "type": "BLOCK" },
+    { "id": "SE1-LG", "x": 0.48, "y": -2.25, "state": "RED", "onTrack": 71, "facing": "NORMAL", "type": "ENTRY" },
+    { "id": "S30", "x": 0.62, "y": -2.25, "state": "GREEN", "onTrack": 70, "facing": "REVERSE", "type": "BLOCK" },
+    { "id": "SX1-LG", "x": 0.72, "y": -1.95, "state": "RED", "onTrack": 60, "facing": "REVERSE", "type": "EXIT" },
+    { "id": "SX2-LG", "x": 0.62, "y": -1.95, "state": "RED", "onTrack": 59, "facing": "REVERSE", "type": "EXIT" },
+    { "id": "SX3-LG", "x": 0.38, "y": -1.95, "state": "RED", "onTrack": 57, "facing": "REVERSE", "type": "EXIT" },
+    { "id": "SX5-LG", "x": 0.38, "y": -1.75, "state": "RED", "onTrack": 57, "facing": "NORMAL", "type": "ENTRY" },
+    { "id": "SX4-LG", "x": 0.48, "y": -1.75, "state": "RED", "onTrack": 58, "facing": "NORMAL", "type": "ENTRY" },
+    { "id": "S36", "x": 0.62, "y": 0.8, "state": "RED", "onTrack": 84, "facing": "REVERSE", "type": "ENTRY" },
+    { "id": "S37", "x": 0.48, "y": 0.82, "state": "GREEN", "onTrack": 85, "facing": "NORMAL", "type": "BLOCK" },
+    { "id": "SX2-BMA", "x": 0.72, "y": 0.31, "state": "RED", "onTrack": 4, "facing": "REVERSE", "type": "EXIT" },
+    { "id": "SX1-BMA", "x": 0.62, "y": 0.3, "state": "RED", "onTrack": 3, "facing": "REVERSE", "type": "EXIT" },
+    { "id": "SX5-BMA", "x": 0.72, "y": 0.5, "state": "RED", "onTrack": 4, "facing": "NORMAL", "type": "EXIT" },
+    { "id": "SX4-BMA", "x": 0.48, "y": 0.5, "state": "RED", "onTrack": 2, "facing": "NORMAL", "type": "EXIT" },
+    { "id": "SX3-BMA", "x": 0.38, "y": 0.5, "state": "RED", "onTrack": 1, "facing": "NORMAL", "type": "EXIT" }
+  ],
+  "platforms": [
+    { "name": "1", "station": "BMA", "onTrack": 1, "x": 0.4, "topY": 0.35, "botY": 0.45 },
+    { "name": "2", "station": "BMA", "onTrack": 2, "x": 0.5, "topY": 0.35, "botY": 0.45 },
+    { "name": "3", "station": "BMA", "onTrack": 3, "x": 0.6, "topY": 0.35, "botY": 0.45 },
+    { "name": "4", "station": "BMA", "onTrack": 4, "x": 0.7, "topY": 0.35, "botY": 0.45 },
+    { "name": "4", "station": "LG", "onTrack": 57, "x": 0.4, "topY": -1.9, "botY": -1.8 },
+    { "name": "3", "station": "LG", "onTrack": 58, "x": 0.5, "topY": -1.9, "botY": -1.8 },
+    { "name": "2", "station": "LG", "onTrack": 59, "x": 0.6, "topY": -1.9, "botY": -1.8 },
+    { "name": "1", "station": "LG", "onTrack": 60, "x": 0.7, "topY": -1.9, "botY": -1.8 }
+  ],
+  "building": [
+    { "id": 1, "name": "Bumiayu", "x": 0.32, "topY": 0.37, "botY": 0.43 },
+    { "id": 2, "name": "LINGGAPURA", "x": 0.77, "topY": -1.9, "botY": -1.8 }
+  ],
+  "rakes": [],
+  "schedules": [
+    {
+      "no": "KA 112B",
+      "n": "Sawunggalih",
+      "t": "PASSENGER",
+      "sT": 73,
+      "tT": 1,
+      "sW": "1647",
+      "aT": "1657",
+      "dT": "1659",
+      "nc": 10,
+      "ll": 15.5,
+      "cl": 20,
+      "cg": 1,
+      "m": "NORMAL",
+      "dari": "PSE",
+      "tujuan": "KTA",
+      "xT": 87
+    }
+  ],
+  "station_names": {
+    "BMA": "Bumiayu",
+    "LG": "Linggapura",
+    "PSE": "Pasar Senen",
+    "KTA": "Kutoarjo"
+  },
+  "crossings": []
+};
+
+// Global State
+let sel = null;      // Selected object { k: 'tracks', i: index }
+let clipboard = null; // Internal App Clipboard { k: 'tracks', obj: {...} }
+let tool = 'select'; // Active tool state
+let vx = 0, vy = 0, z = 0.3; // Viewport state
+let undoStack = [];
+let drag = null;
+let dpr = 1;
+const pts = new Map();
+let pinch = null;
+let toastTimeout = null;
+let activeLegsIndex = -1; // Index kereta untuk modal legs
+let rot = false;      // pratinjau diputar 90° (hanya tampilan, data tidak berubah)
+
+const KIND = {
+  tracks: 'Track',
+  signals: 'Sinyal',
+  switches: 'Wesel',
+  platforms: 'Peron',
+  building: 'Bangunan',
+  stations: 'Nama Stasiun',
+  rakes: 'Rake Standby',
+  crossings: 'Crossing / JPL'
+};
+
+const ENUM = {
+  type: {
+    tracks: ['MAIN', 'SWITCH', 'SPAWN', 'END'],
+    signals: ['ENTRY', 'EXIT', 'SHUNT', 'BLOCK', 'DISTANT', 'REPEATER']
+  },
+  facing: ['NORMAL', 'REVERSE'],
+  state: {
+    signals: ['RED', 'YELLOW', 'GREEN'],
+    switches: ['NORMAL', 'DIVERGE']
+  },
+  dir: ['BOTH', 'NORMAL', 'REVERSE']
+};
+
+const r3 = v => Math.round(v * 1000) / 1000;
+// Normal: X ke kanan, Y ke bawah. Putar 90° (sama dengan game): Y ke kanan, X ke atas.
+const S = (x, y) => rot ? [y * 1000 * z + vx, -x * 1000 * z + vy] : [x * 1000 * z + vx, y * 1000 * z + vy];
+const W = (sx, sy) => rot ? [-(sy - vy) / (1000 * z), (sx - vx) / (1000 * z)] : [(sx - vx) / (1000 * z), (sy - vy) / (1000 * z)];
+const arr = k => D[k] || (D[k] = []);
+const objMap = k => D[k] || (D[k] = {});
+
+function showToast(msg, isError = false) {
+  const toast = $('#toast');
+  toast.textContent = msg;
+  toast.className = `absolute top-3 left-1/2 -translate-x-1/2 ${isError ? 'bg-rose-600/95' : 'bg-sky-600/95'} backdrop-blur-md text-white font-medium px-4 py-1.5 rounded-full text-xs shadow-xl transition-all duration-300 opacity-100 pointer-events-none transform translate-y-0 z-20`;
+
+  if (toastTimeout) clearTimeout(toastTimeout);
+  toastTimeout = setTimeout(() => {
+    toast.className = toast.className.replace('opacity-100 translate-y-0', 'opacity-0 -translate-y-2');
+  }, 2200);
+}
+
+function snapshot() {
+  undoStack.push(JSON.stringify(D));
+  if (undoStack.length > 60) undoStack.shift();
+}
+
+function isSel(k, i) {
+  return sel && sel.k === k && sel.i === i;
+}
+
+function resize() {
+  dpr = window.devicePixelRatio || 1;
+  const rect = cv.parentElement.getBoundingClientRect();
+  cv.width = rect.width * dpr;
+  cv.height = rect.height * dpr;
+  draw();
+}
+
+function centerOn(wx, wy) {
+  const w = cv.width / dpr, h = cv.height / dpr;
+  if (rot) { vx = w / 2 - wy * 1000 * z; vy = h / 2 + wx * 1000 * z; }
+  else { vx = w / 2 - wx * 1000 * z; vy = h / 2 - wy * 1000 * z; }
+}
+
+function fit() {
+  const t = arr('tracks');
+  if (!t.length) return;
+  let minX = Infinity, maxX = -Infinity, minY = Infinity, maxY = -Infinity;
+  t.forEach(o => {
+    minX = Math.min(minX, o.startX, o.endX);
+    maxX = Math.max(maxX, o.startX, o.endX);
+    minY = Math.min(minY, o.startY, o.endY);
+    maxY = Math.max(maxY, o.startY, o.endY);
+  });
+  const w = cv.width / dpr, h = cv.height / dpr;
+  const spanX = (maxX - minX + 0.2) * 1000, spanY = (maxY - minY + 0.2) * 1000;
+  z = rot ? Math.min(w / spanY, h / spanX) : Math.min(w / spanX, h / spanY);
+  centerOn((minX + maxX) / 2, (minY + maxY) / 2);
+  draw();
+}
+
+// Canvas Render Function
+function draw() {
+  const w = cv.width / dpr, h = cv.height / dpr;
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  ctx.fillStyle = '#0f172a';
+  ctx.fillRect(0, 0, w, h);
+
+  // Render Grid
+  const showGrid = $('#grid-toggle')?.checked;
+  if (showGrid) {
+    const gridStep = 0.01;
+    const [wMinX, wMinY] = W(0, 0);
+    const [wMaxX, wMaxY] = W(w, h);
+
+    // garis dunia konstan-X / konstan-Y; arahnya di layar bergantung pada rotasi
+    const lineX = x => {
+      if (rot) { const sy = S(x, 0)[1]; ctx.moveTo(0, sy); ctx.lineTo(w, sy); }
+      else { const sx = S(x, 0)[0]; ctx.moveTo(sx, 0); ctx.lineTo(sx, h); }
+    };
+    const lineY = y => {
+      if (rot) { const sx = S(0, y)[0]; ctx.moveTo(sx, 0); ctx.lineTo(sx, h); }
+      else { const sy = S(0, y)[1]; ctx.moveTo(0, sy); ctx.lineTo(w, sy); }
+    };
+
+    const startX = Math.floor(Math.min(wMinX, wMaxX) / gridStep) * gridStep;
+    const endX = Math.ceil(Math.max(wMinX, wMaxX) / gridStep) * gridStep;
+    const startY = Math.floor(Math.min(wMinY, wMaxY) / gridStep) * gridStep;
+    const endY = Math.ceil(Math.max(wMinY, wMaxY) / gridStep) * gridStep;
+
+    // Minor grid lines at 0.01 intervals
+    if (z > 0.15) {
+      ctx.beginPath();
+      ctx.strokeStyle = 'rgba(255, 255, 255, 0.05)';
+      ctx.lineWidth = 1;
+      for (let x = startX; x <= endX; x += gridStep) lineX(x);
+      for (let y = startY; y <= endY; y += gridStep) lineY(y);
+      ctx.stroke();
+    }
+
+    // Major grid lines at 0.10 intervals
+    ctx.beginPath();
+    ctx.strokeStyle = 'rgba(56, 189, 248, 0.18)';
+    ctx.lineWidth = 1.2;
+    const startXMajor = Math.floor(Math.min(wMinX, wMaxX) / 0.1) * 0.1;
+    const endXMajor = Math.ceil(Math.max(wMinX, wMaxX) / 0.1) * 0.1;
+    const startYMajor = Math.floor(Math.min(wMinY, wMaxY) / 0.1) * 0.1;
+    const endYMajor = Math.ceil(Math.max(wMinY, wMaxY) / 0.1) * 0.1;
+    for (let x = startXMajor; x <= endXMajor; x += 0.1) lineX(x);
+    for (let y = startYMajor; y <= endYMajor; y += 0.1) lineY(y);
+    ctx.stroke();
+  }
+
+  // 1. Stations Boundary Areas
+  arr('stations').forEach((st, i) => {
+    const t = rot ? S(0, st.topY)[0] : S(0, st.topY)[1];
+    const b = rot ? S(0, st.botY)[0] : S(0, st.botY)[1];
+    const sSelected = isSel('stations', i);
+
+    ctx.fillStyle = sSelected ? 'rgba(99, 102, 241, 0.15)' : 'rgba(255, 255, 255, 0.03)';
+    if (rot) ctx.fillRect(t, 0, b - t, h); else ctx.fillRect(0, t, w, b - t);
+
+    ctx.beginPath();
+    if (rot) { ctx.moveTo(t, 0); ctx.lineTo(t, h); ctx.moveTo(b, 0); ctx.lineTo(b, h); }
+    else { ctx.moveTo(0, t); ctx.lineTo(w, t); ctx.moveTo(0, b); ctx.lineTo(w, b); }
+    ctx.strokeStyle = sSelected ? '#818cf8' : 'rgba(255, 255, 255, 0.15)';
+    ctx.lineWidth = sSelected ? 2 : 1;
+    ctx.setLineDash([4, 4]);
+    ctx.stroke();
+    ctx.setLineDash([]);
+
+    ctx.fillStyle = sSelected ? '#a5b4fc' : '#64748b';
+    ctx.font = 'bold 12px system-ui';
+    ctx.textAlign = 'left';
+    ctx.fillText(`[STASIUN] ${st.name || st.code}`, rot ? t + 8 : 15, rot ? 16 : t + 16);
+  });
+
+  // 2. Buildings
+  arr('building').forEach((b, i) => {
+    const a = S(b.x, b.topY), c = S(b.x, b.botY), hw = 45 * z;
+    const bSelected = isSel('building', i);
+    let rx, ry, rw2, rh2;
+    if (rot) { rx = Math.min(a[0], c[0]); ry = a[1] - hw; rw2 = Math.abs(c[0] - a[0]); rh2 = hw * 2; }
+    else { rx = a[0] - hw; ry = Math.min(a[1], c[1]); rw2 = hw * 2; rh2 = Math.abs(c[1] - a[1]); }
+    ctx.fillStyle = bSelected ? '#f59e0b' : '#334155';
+    ctx.fillRect(rx, ry, rw2, rh2);
+    ctx.strokeStyle = bSelected ? '#fbbf24' : '#64748b';
+    ctx.lineWidth = 1.5;
+    ctx.strokeRect(rx, ry, rw2, rh2);
+
+    ctx.fillStyle = '#f8fafc';
+    ctx.font = '600 11px system-ui';
+    ctx.textAlign = 'center';
+    ctx.fillText(b.name || 'GEDUNG', rx + rw2 / 2, ry + rh2 / 2 + 4);
+  });
+
+  // 3. Platforms
+  arr('platforms').forEach((p, i) => {
+    const a = S(p.x, p.topY), c = S(p.x, p.botY), hw = 14 * z;
+    let rx, ry, rw2, rh2;
+    if (rot) { rx = Math.min(a[0], c[0]); ry = a[1] - hw; rw2 = Math.abs(c[0] - a[0]); rh2 = hw * 2; }
+    else { rx = a[0] - hw; ry = Math.min(a[1], c[1]); rw2 = hw * 2; rh2 = Math.abs(c[1] - a[1]); }
+    ctx.fillStyle = isSel('platforms', i) ? '#fbbf24' : '#475569';
+    ctx.fillRect(rx, ry, rw2, rh2);
+    if (z > 0.2) {
+      ctx.fillStyle = '#f8fafc';
+      ctx.font = '10px system-ui';
+      ctx.textAlign = 'center';
+      ctx.fillText('P' + (p.name || ''), rx + rw2 / 2, ry + rh2 / 2 + 3);
+    }
+  });
+
+  const showId = $('#ids').checked;
+
+  // 4. Tracks
+  const trackMap = new Map();
+  arr('tracks').forEach((t, i) => {
+    trackMap.set(t.id, t);
+    const a = S(t.startX, t.startY), b = S(t.endX, t.endY), s = isSel('tracks', i);
+    ctx.beginPath();
+    ctx.moveTo(...a);
+    ctx.lineTo(...b);
+    ctx.lineWidth = s ? 5 : 3;
+
+    ctx.setLineDash((t.type === 'SPAWN' || t.type === 'END') ? [6, 4] : []);
+    ctx.strokeStyle = s ? '#f59e0b' : (t.type === 'SWITCH' ? '#f97316' : ((t.type === 'END' && (t.spawn === true || t.spawn === 'true')) ? '#d946ef' : ((t.type === 'SPAWN' || t.type === 'END') ? '#06b6d4' : '#ef4444')));
+    ctx.stroke();
+    ctx.setLineDash([]);
+
+    if (showId && z > 0.1) {
+      ctx.fillStyle = '#e2e8f0';
+      ctx.font = '10px monospace';
+      ctx.textAlign = 'center';
+      ctx.fillText(t.id + (t.name ? ' ' + t.name : ''), (a[0] + b[0]) / 2 + 10, (a[1] + b[1]) / 2);
+    }
+
+    if (s) {
+      [a, b].forEach(p => {
+        ctx.beginPath();
+        ctx.arc(p[0], p[1], 6, 0, Math.PI * 2);
+        ctx.fillStyle = '#f59e0b';
+        ctx.fill();
+      });
+    }
+  });
+
+  // 4.5 Crossings (JPL / Perlintasan)
+  arr('crossings').forEach((cr, i) => {
+    const cSelected = isSel('crossings', i);
+    const pad = (typeof cr.pad === 'number') ? cr.pad : 0.02;
+    const trackList = Array.isArray(cr.tracks) ? cr.tracks : [];
+
+    let minX = Infinity, maxX = -Infinity;
+    if (trackList.length > 0) {
+      arr('tracks').forEach(t => {
+        if (trackList.includes(t.id)) {
+          minX = Math.min(minX, t.startX, t.endX);
+          maxX = Math.max(maxX, t.startX, t.endX);
+        }
+      });
+    }
+    if (minX === Infinity) { minX = 0.3; maxX = 0.8; }
+
+    const x1 = minX - pad;
+    const x2 = maxX + pad;
+    const p1 = S(x1, cr.y);
+    const p2 = S(x2, cr.y);
+    const rw = Math.max(8, 14 * z);
+
+    // Jalan aspal
+    ctx.beginPath();
+    ctx.moveTo(p1[0], p1[1]);
+    ctx.lineTo(p2[0], p2[1]);
+    ctx.lineWidth = rw;
+    ctx.strokeStyle = cSelected ? '#f59e0b' : '#334155';
+    ctx.stroke();
+
+    // Marka jalan putus-putus
+    ctx.beginPath();
+    ctx.moveTo(p1[0], p1[1]);
+    ctx.lineTo(p2[0], p2[1]);
+    ctx.lineWidth = Math.max(2, rw * 0.25);
+    ctx.setLineDash([6, 6]);
+    ctx.strokeStyle = cSelected ? '#fbbf24' : '#e2e8f0';
+    ctx.stroke();
+    ctx.setLineDash([]);
+
+    // Tiang perlintasan
+    [p1, p2].forEach(p => {
+      ctx.beginPath();
+      ctx.arc(p[0], p[1], 5, 0, Math.PI * 2);
+      ctx.fillStyle = cSelected ? '#f59e0b' : '#ef4444';
+      ctx.fill();
+      ctx.strokeStyle = '#ffffff';
+      ctx.lineWidth = 1.5;
+      ctx.stroke();
+    });
+
+    if (z > 0.1) {
+      ctx.fillStyle = cSelected ? '#fbbf24' : '#f8fafc';
+      ctx.font = 'bold 10px system-ui';
+      ctx.textAlign = 'left';
+      ctx.fillText(`JPL ${cr.no || cr.id || ''}`, p2[0] + 8, p2[1] + 3);
+    }
+  });
+
+  // 5. Visualisasi Rakes Standby
+  arr('rakes').forEach((rk, i) => {
+    const t = trackMap.get(rk.track);
+    if (!t) return;
+    const ratio = Math.max(0, Math.min(1, rk.pos !== undefined ? rk.pos : 0.5));
+    const rx = t.startX + (t.endX - t.startX) * ratio;
+    const ry = t.startY + (t.endY - t.startY) * ratio;
+    const p = S(rx, ry);
+
+    const rSelected = isSel('rakes', i);
+    const rw = 24 * z, rh = 12 * z;
+    ctx.fillStyle = rSelected ? '#f59e0b' : (rk.t === 'FREIGHT' ? '#d97706' : '#2563eb');
+    ctx.fillRect(p[0] - rw / 2, p[1] - rh / 2, rw, rh);
+    ctx.strokeStyle = rSelected ? '#fbbf24' : '#ffffff';
+    ctx.lineWidth = rSelected ? 2 : 1;
+    ctx.strokeRect(p[0] - rw / 2, p[1] - rh / 2, rw, rh);
+
+    if (z > 0.15) {
+      ctx.fillStyle = '#ffffff';
+      ctx.font = 'bold 9px system-ui';
+      ctx.textAlign = 'center';
+      ctx.fillText(rk.no || 'RAKE', p[0], p[1] + 3);
+    }
+  });
+
+  // Garis penghubung wesel berpasangan
+  arr('switches').forEach(o => {
+    if (!o.pair) return;
+    const q = arr('switches').find(x => x.id === o.pair);
+    if (!q) return;
+    const a = S(o.x, o.y), b = S(q.x, q.y);
+    ctx.beginPath();
+    ctx.moveTo(a[0], a[1]);
+    ctx.lineTo(b[0], b[1]);
+    ctx.strokeStyle = '#facc15';
+    ctx.lineWidth = 1.5;
+    ctx.setLineDash([3, 3]);
+    ctx.stroke();
+    ctx.setLineDash([]);
+  });
+
+  // 6. Switches
+  arr('switches').forEach((o, i) => {
+    const p = S(o.x, o.y);
+    ctx.beginPath();
+    ctx.moveTo(p[0], p[1] - 8);
+    ctx.lineTo(p[0] + 8, p[1]);
+    ctx.lineTo(p[0], p[1] + 8);
+    ctx.lineTo(p[0] - 8, p[1]);
+    ctx.closePath();
+    ctx.fillStyle = isSel('switches', i) ? '#f59e0b' : '#f8fafc';
+    ctx.fill();
+    ctx.strokeStyle = '#0f172a';
+    ctx.lineWidth = 1.5;
+    ctx.stroke();
+
+    if (showId && z > 0.2) {
+      ctx.fillStyle = '#fbbf24';
+      ctx.font = '10px monospace';
+      ctx.textAlign = 'left';
+      ctx.fillText(o.id || '', p[0] + 10, p[1] - 4);
+    }
+  });
+
+  // 7. Signals
+  arr('signals').forEach((o, i) => {
+    const p = S(o.x, o.y);
+    ctx.beginPath();
+    ctx.arc(p[0], p[1], 6, 0, Math.PI * 2);
+    ctx.fillStyle = o.state === 'GREEN' ? '#22c55e' : (o.state === 'YELLOW' ? '#eab308' : '#ef4444');
+    ctx.fill();
+    ctx.lineWidth = isSel('signals', i) ? 3 : 1.5;
+    ctx.strokeStyle = isSel('signals', i) ? '#f59e0b' : '#ffffff';
+    ctx.stroke();
+
+    ctx.fillStyle = '#f8fafc';
+    ctx.font = '10px system-ui';
+    ctx.textAlign = 'center';
+    ctx.fillText(o.facing === 'REVERSE' ? (rot ? '◀' : '▲') : (rot ? '▶' : '▼'), p[0], p[1] - 9);
+
+    if (showId && z > 0.2) {
+      ctx.textAlign = 'left';
+      ctx.fillStyle = '#fbbf24';
+      ctx.font = '10px monospace';
+      ctx.fillText(o.id || '', p[0] + 9, p[1] + 3);
+    }
+  });
+
+  // Track Drag Preview
+  if (drag && drag.m === 'new') {
+    const a = S(drag.a[0], drag.a[1]), b = S(drag.b[0], drag.b[1]);
+    ctx.beginPath();
+    ctx.moveTo(...a);
+    ctx.lineTo(...b);
+    ctx.strokeStyle = '#22c55e';
+    ctx.lineWidth = 3;
+    ctx.stroke();
+  }
+
+  updateStatusText();
+}
+
+function updateStatusText() {
+  let s = {
+    select: 'Pilih/geser objek, geser kanvas, cubit untuk zoom',
+    track: 'Seret mouse/sentuhan di kanvas untuk membuat track baru',
+    signal: 'Ketuk lokasi kanvas untuk menaruh sinyal baru',
+    switch: 'Ketuk lokasi kanvas untuk menaruh wesel baru',
+    platform: 'Ketuk lokasi kanvas untuk menaruh peron baru',
+    building: 'Ketuk lokasi kanvas untuk menaruh gedung bangunan baru',
+    crossing: 'Ketuk lokasi kanvas untuk menaruh crossing (perlintasan) baru'
+  }[tool];
+
+  if (sel) {
+    const item = arr(sel.k)[sel.i];
+    if (item) {
+      s = `${KIND[sel.k]} ${item.id ?? item.name ?? item.code ?? item.no ?? ''} dipilih`;
+    }
+  }
+  if (rot) s += ' [tampilan diputar 90°]';
+  $('#st-text').textContent = s;
+}
+
+function dseg(px, py, a, b, c, d) {
+  const dx = c - a, dy = d - b, l = dx * dx + dy * dy;
+  let u = l ? ((px - a) * dx + (py - b) * dy) / l : 0;
+  u = Math.max(0, Math.min(1, u));
+  return Math.hypot(px - (a + dx * u), py - (b + dy * u));
+}
+
+function hit(sx, sy) {
+  const T = 16;
+  let best = null, bd = T;
+  const chk = (k, fn) => arr(k).forEach((o, i) => { const d = fn(o); if (d < bd) { bd = d; best = { k, i }; } });
+
+  chk('signals', o => { const p = S(o.x, o.y); return Math.hypot(sx - p[0], sy - p[1]); });
+  chk('switches', o => { const p = S(o.x, o.y); return Math.hypot(sx - p[0], sy - p[1]); });
+
+  if (best) return best;
+
+  if (sel && sel.k === 'tracks') {
+    const t = arr('tracks')[sel.i];
+    if (t) {
+      const a = S(t.startX, t.startY), b = S(t.endX, t.endY);
+      if (Math.hypot(sx - a[0], sy - a[1]) < 14) return { k: 'tracks', i: sel.i, ep: 0 };
+      if (Math.hypot(sx - b[0], sy - b[1]) < 14) return { k: 'tracks', i: sel.i, ep: 1 };
+    }
+  }
+
+  chk('tracks', t => { const a = S(t.startX, t.startY), b = S(t.endX, t.endY); return dseg(sx, sy, a[0], a[1], b[0], b[1]); });
+  if (best) return best;
+
+  chk('platforms', o => { const a = S(o.x, o.topY), b = S(o.x, o.botY); return dseg(sx, sy, a[0], a[1], b[0], b[1]) - 14 * z; });
+  chk('building', o => { const a = S(o.x, o.topY), b = S(o.x, o.botY); return dseg(sx, sy, a[0], a[1], b[0], b[1]) - 45 * z; });
+
+  chk('crossings', cr => {
+    const pad = (typeof cr.pad === 'number') ? cr.pad : 0.02;
+    const trackList = Array.isArray(cr.tracks) ? cr.tracks : [];
+    let minX = Infinity, maxX = -Infinity;
+    if (trackList.length > 0) {
+      arr('tracks').forEach(t => {
+        if (trackList.includes(t.id)) {
+          minX = Math.min(minX, t.startX, t.endX);
+          maxX = Math.max(maxX, t.startX, t.endX);
+        }
+      });
+    }
+    if (minX === Infinity) { minX = 0.3; maxX = 0.8; }
+    const p1 = S(minX - pad, cr.y);
+    const p2 = S(maxX + pad, cr.y);
+    return dseg(sx, sy, p1[0], p1[1], p2[0], p2[1]);
+  });
+  if (best) return best;
+
+  const trackMap = new Map();
+  arr('tracks').forEach(t => trackMap.set(t.id, t));
+  chk('rakes', rk => {
+    const t = trackMap.get(rk.track);
+    if (!t) return Infinity;
+    const ratio = Math.max(0, Math.min(1, rk.pos !== undefined ? rk.pos : 0.5));
+    const rx = t.startX + (t.endX - t.startX) * ratio;
+    const ry = t.startY + (t.endY - t.startY) * ratio;
+    const p = S(rx, ry);
+    return Math.hypot(sx - p[0], sy - p[1]);
+  });
+  if (best) return best;
+
+  const syWorld = W(sx, sy)[1];
+  arr('stations').forEach((st, i) => {
+    if (!best && syWorld >= st.topY && syWorld <= st.botY) {
+      best = { k: 'stations', i };
+    }
+  });
+
+  return best;
+}
+
+function snapPt(w, sx, sy) {
+  for (const t of arr('tracks')) {
+    for (const [x, y] of [[t.startX, t.startY], [t.endX, t.endY]]) {
+      const p = S(x, y);
+      if (Math.hypot(sx - p[0], sy - p[1]) < 12) return [x, y];
+    }
+  }
+  const snapGrid = $('#grid-toggle')?.checked;
+  const step = snapGrid ? 0.01 : 0.005;
+  return [r3(Math.round(w[0] / step) * step), r3(Math.round(w[1] / step) * step)];
+}
+
+function nearestTrack(x, y) {
+  let b = -1, bd = Infinity;
+  arr('tracks').forEach(t => {
+    const d = dseg(x, y, t.startX, t.startY, t.endX, t.endY);
+    if (d < bd) { bd = d; b = t.id; }
+  });
+  return b;
+}
+
+function nextNum(k, prefix) {
+  return prefix + (arr(k).length + 1);
+}
+
+function pos(e) {
+  const r = cv.getBoundingClientRect();
+  return [e.clientX - r.left, e.clientY - r.top];
+}
+
+// COPY & PASTE FUNCTIONS
+function copyObject() {
+  if (!sel) {
+    showToast('Pilih objek terlebih dahulu untuk disalin', true);
+    return;
+  }
+  const obj = arr(sel.k)[sel.i];
+  if (!obj) return;
+
+  clipboard = {
+    k: sel.k,
+    obj: JSON.parse(JSON.stringify(obj))
+  };
+  const label = obj.id || obj.name || obj.code || obj.no || KIND[sel.k];
+  showToast(`Objek ${KIND[sel.k]} "${label}" tersalin ke clipboard`);
+}
+
+function pasteObject() {
+  if (!clipboard || !clipboard.obj) {
+    showToast('Clipboard kosong! Salin objek terlebih dahulu', true);
+    return;
+  }
+
+  snapshot();
+  const k = clipboard.k;
+  const newObj = JSON.parse(JSON.stringify(clipboard.obj));
+  const offset = 0.01; // Offset pergeseran koordinat
+
+  // Generate Unique ID & Offset Coordinates
+  if (k === 'tracks') {
+    const maxId = Math.max(0, ...arr('tracks').map(t => typeof t.id === 'number' ? t.id : 0));
+    newObj.id = maxId + 1;
+    newObj.startX = r3(newObj.startX + offset);
+    newObj.startY = r3(newObj.startY + offset);
+    newObj.endX = r3(newObj.endX + offset);
+    newObj.endY = r3(newObj.endY + offset);
+  } else if (k === 'signals') {
+    const baseId = (newObj.id || 'S').replace(/\d+$/, '');
+    newObj.id = nextNum('signals', baseId || 'S');
+    newObj.x = r3(newObj.x + offset);
+    newObj.y = r3(newObj.y + offset);
+  } else if (k === 'switches') {
+    const baseId = (newObj.id || 'W').replace(/\d+$/, '');
+    newObj.id = nextNum('switches', baseId || 'W');
+    delete newObj.pair;
+    newObj.x = r3(newObj.x + offset);
+    newObj.y = r3(newObj.y + offset);
+  } else if (k === 'platforms') {
+    newObj.name = String(arr('platforms').length + 1);
+    newObj.x = r3(newObj.x + offset);
+    newObj.topY = r3(newObj.topY + offset);
+    newObj.botY = r3(newObj.botY + offset);
+  } else if (k === 'building') {
+    newObj.id = arr('building').length + 1;
+    newObj.name = (newObj.name || 'GEDUNG') + ' (COPY)';
+    newObj.x = r3(newObj.x + offset);
+    newObj.topY = r3(newObj.topY + offset);
+    newObj.botY = r3(newObj.botY + offset);
+  } else if (k === 'stations') {
+    newObj.code = (newObj.code || 'ST') + '_C';
+    newObj.name = (newObj.name || 'STASIUN') + ' (COPY)';
+    newObj.topY = r3(newObj.topY + offset);
+    newObj.botY = r3(newObj.botY + offset);
+  } else if (k === 'rakes') {
+    newObj.no = 'RK ' + (arr('rakes').length + 1);
+  } else if (k === 'crossings') {
+    const baseId = (newObj.id || 'JPL').replace(/\d+$/, '');
+    newObj.id = nextNum('crossings', baseId || 'JPL');
+    newObj.no = String(arr('crossings').length + 1);
+    newObj.y = r3(newObj.y + offset);
+  }
+
+  arr(k).push(newObj);
+  sel = { k, i: arr(k).length - 1 };
+  renderProperties();
+  draw();
+  const label = newObj.id || newObj.name || newObj.code || newObj.no || KIND[k];
+  showToast(`Objek ${KIND[k]} "${label}" berhasil ditempel`);
+}
+
+// Pointer Event Listeners
+cv.addEventListener('pointerdown', e => {
+  cv.setPointerCapture(e.pointerId);
+  const p = pos(e);
+  pts.set(e.pointerId, p);
+
+  if (pts.size === 2) {
+    const [a, b] = [...pts.values()];
+    pinch = { d: Math.hypot(a[0] - b[0], a[1] - b[1]), z0: z };
+    drag = null;
+    return;
+  }
+
+  const w = W(...p);
+
+  if (tool === 'track') {
+    const s = snapPt(w, ...p);
+    drag = { m: 'new', a: s, b: s };
+    return;
+  }
+
+  if (tool === 'signal') {
+    snapshot();
+    const snapGrid = $('#grid-toggle')?.checked;
+    const step = snapGrid ? 0.01 : 0.005;
+    const gx = r3(Math.round(w[0] / step) * step);
+    const gy = r3(Math.round(w[1] / step) * step);
+    const o = { id: nextNum('signals', 'S'), x: gx, y: gy, state: 'RED', onTrack: nearestTrack(w[0], w[1]), facing: 'NORMAL', type: 'ENTRY', station: ''};
+    arr('signals').push(o);
+    sel = { k: 'signals', i: arr('signals').length - 1 };
+    setTool('select');
+    renderProperties();
+    return;
+  }
+
+  if (tool === 'switch') {
+    snapshot();
+    const snapGrid = $('#grid-toggle')?.checked;
+    const step = snapGrid ? 0.01 : 0.005;
+    const gx = r3(Math.round(w[0] / step) * step);
+    const gy = r3(Math.round(w[1] / step) * step);
+    arr('switches').push({ id: nextNum('switches', 'W'), x: gx, y: gy, normal: -1, diverge: -1, state: 'NORMAL' });
+    sel = { k: 'switches', i: arr('switches').length - 1 };
+    setTool('select');
+    renderProperties();
+    return;
+  }
+
+  if (tool === 'platform') {
+    snapshot();
+    const snapGrid = $('#grid-toggle')?.checked;
+    const step = snapGrid ? 0.01 : 0.005;
+    const gx = r3(Math.round(w[0] / step) * step);
+    const gy = r3(Math.round(w[1] / step) * step);
+    arr('platforms').push({ name: String(arr('platforms').length + 1), station: '', onTrack: nearestTrack(w[0], w[1]), x: gx, topY: r3(gy - 0.05), botY: r3(gy + 0.05) });
+    sel = { k: 'platforms', i: arr('platforms').length - 1 };
+    setTool('select');
+    renderProperties();
+    return;
+  }
+
+  if (tool === 'building') {
+    snapshot();
+    const snapGrid = $('#grid-toggle')?.checked;
+    const step = snapGrid ? 0.01 : 0.005;
+    const gx = r3(Math.round(w[0] / step) * step);
+    const gy = r3(Math.round(w[1] / step) * step);
+    arr('building').push({ id: arr('building').length + 1, name: 'BANGUNAN BARU', x: gx, topY: r3(gy - 0.05), botY: r3(gy + 0.05) });
+    sel = { k: 'building', i: arr('building').length - 1 };
+    setTool('select');
+    renderProperties();
+    return;
+  }
+
+  if (tool === 'crossing') {
+    snapshot();
+    const snapGrid = $('#grid-toggle')?.checked;
+    const step = snapGrid ? 0.01 : 0.005;
+    const gy = r3(Math.round(w[1] / step) * step);
+    const nearTracks = arr('tracks')
+      .filter(t => Math.min(t.startY, t.endY) <= gy + 0.1 && Math.max(t.startY, t.endY) >= gy - 0.1)
+      .map(t => t.id);
+
+    const o = {
+      id: nextNum('crossings', 'JPL'),
+      no: String(arr('crossings').length + 1),
+      tracks: nearTracks.length > 0 ? nearTracks : [1, 2],
+      y: gy,
+      pad: 0.02,
+    };
+    arr('crossings').push(o);
+    sel = { k: 'crossings', i: arr('crossings').length - 1 };
+    setTool('select');
+    renderProperties();
+    return;
+  }
+
+  const h = hit(...p);
+  if (h) {
+    sel = { k: h.k, i: h.i };
+    const o = arr(h.k)[h.i];
+    drag = { m: h.ep !== undefined ? 'ep' : 'move', ep: h.ep, orig: JSON.parse(JSON.stringify(o)), start: w, moved: false };
+  } else {
+    sel = null;
+    drag = { m: 'pan', last: p };
+  }
+  renderProperties();
+  draw();
+});
+
+cv.addEventListener('pointermove', e => {
+  const p = pos(e);
+  if (!pts.has(e.pointerId)) return;
+  pts.set(e.pointerId, p);
+
+  if (pinch && pts.size === 2) {
+    const [a, b] = [...pts.values()];
+    const d = Math.hypot(a[0] - b[0], a[1] - b[1]);
+    const mx = (a[0] + b[0]) / 2, my = (a[1] + b[1]) / 2;
+    const nz = Math.max(0.03, Math.min(5, pinch.z0 * d / pinch.d));
+    const f = nz / z;
+    vx = mx - (mx - vx) * f;
+    vy = my - (my - vy) * f;
+    z = nz;
+    draw();
+    return;
+  }
+
+  if (!drag) return;
+  const w = W(...p);
+
+  if (drag.m === 'pan') {
+    vx += p[0] - drag.last[0];
+    vy += p[1] - drag.last[1];
+    drag.last = p;
+  } else if (drag.m === 'new') {
+    drag.b = snapPt(w, ...p);
+  } else {
+    const o = arr(sel.k)[sel.i];
+    if (!drag.moved) {
+      if (Math.hypot(w[0] - drag.start[0], w[1] - drag.start[1]) * 1000 * z < 4) return;
+      drag.moved = true;
+      snapshot();
+    }
+    if (drag.m === 'ep') {
+      const s = snapPt(w, ...p);
+      if (drag.ep === 0) { o.startX = s[0]; o.startY = s[1]; }
+      else { o.endX = s[0]; o.endY = s[1]; }
+    } else {
+      const snapGrid = $('#grid-toggle')?.checked;
+      const step = snapGrid ? 0.01 : 0.005;
+      const dx = Math.round((w[0] - drag.start[0]) / step) * step;
+      const dy = Math.round((w[1] - drag.start[1]) / step) * step;
+      for (const k in drag.orig) {
+        if (typeof drag.orig[k] !== 'number') continue;
+        if (/^(x|startX|endX)$/.test(k)) o[k] = r3(Math.round((drag.orig[k] + dx) / step) * step);
+        else if (/^(y|startY|endY|topY|botY)$/.test(k)) o[k] = r3(Math.round((drag.orig[k] + dy) / step) * step);
+      }
+    }
+  }
+  draw();
+});
+
+function up(e) {
+  pts.delete(e.pointerId);
+  if (pts.size < 2) pinch = null;
+
+  if (drag && drag.m === 'new') {
+    const a = drag.a, b = drag.b;
+    if (Math.hypot(a[0] - b[0], a[1] - b[1]) > 0.01) {
+      snapshot();
+      const id = Math.max(0, ...arr('tracks').map(t => typeof t.id === 'number' ? t.id : 0)) + 1;
+      arr('tracks').push({ id, length: 100, speed: 30, startX: a[0], startY: a[1], endX: b[0], endY: b[1], type: 'MAIN', "buffer": false });
+      sel = { k: 'tracks', i: arr('tracks').length - 1 };
+      setTool('select');
+    }
+  }
+  if (drag && drag.moved) renderProperties();
+  drag = null;
+  draw();
+}
+
+cv.addEventListener('pointerup', up);
+cv.addEventListener('pointercancel', up);
+
+cv.addEventListener('wheel', e => {
+  e.preventDefault();
+  const p = pos(e);
+  const nz = Math.max(0.03, Math.min(5, z * (e.deltaY < 0 ? 1.15 : 0.87)));
+  const f = nz / z;
+  vx = p[0] - (p[0] - vx) * f;
+  vy = p[1] - (p[1] - vy) * f;
+  z = nz;
+  draw();
+}, { passive: false });
+
+// Keyboard Shortcuts (Ctrl+C / Ctrl+V)
+window.addEventListener('keydown', e => {
+  if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA' || e.target.tagName === 'SELECT') {
+    return; // Don't trigger shortcuts when typing in inputs
+  }
+  const isCmdOrCtrl = e.ctrlKey || e.metaKey;
+  if (isCmdOrCtrl && (e.key === 'c' || e.key === 'C')) {
+    e.preventDefault();
+    copyObject();
+  } else if (isCmdOrCtrl && (e.key === 'v' || e.key === 'V')) {
+    e.preventDefault();
+    pasteObject();
+  } else if (e.key === 'Delete' || e.key === 'Backspace') {
+    if (sel) {
+      e.preventDefault();
+      snapshot();
+      arr(sel.k).splice(sel.i, 1);
+      sel = null;
+      renderProperties();
+      draw();
+      showToast('Objek dihapus');
+    }
+  }
+});
+
+function setTool(t) {
+  tool = t;
+  document.querySelectorAll('#bar .tool-btn').forEach(b => {
+    const active = b.dataset.t === t;
+    b.classList.toggle('bg-sky-600', active);
+    b.classList.toggle('text-white', active);
+    b.classList.toggle('bg-slate-800', !active);
+    b.classList.toggle('text-slate-300', !active);
+  });
+  draw();
+}
+
+document.querySelectorAll('#bar .tool-btn').forEach(b => b.onclick = () => setTool(b.dataset.t));
+
+// Copy & Paste Button Handlers
+$('#copy-btn').onclick = copyObject;
+$('#paste-btn').onclick = pasteObject;
+
+// Reset / Template Kosong Baru
+$('#new-json-btn').onclick = () => {
+  if (confirm("Apakah Anda yakin ingin membuat berkas JSON baru yang kosong? Seluruh data yang belum disimpan akan hilang.")) {
+    snapshot();
+    D = {
+      map_id: genMapId(),
+      station_name: "Stasiun Baru",
+      author: "",
+      startTime: "08:00",
+      endTime: "12:00",
+      stations: [],
+      crossings: [],
+      tracks: [],
+      switches: [],
+      signals: [],
+      platforms: [],
+      building: [],
+      rakes: [],
+      schedules: [],
+      station_names: {}
+    };
+    sel = null;
+    clipboard = null;
+    renderProperties();
+    renderSchedules();
+    renderRakes();
+    renderStationNames();
+    renderWatermark();
+    draw();
+    showToast('Berkas JSON baru berhasil dibuat');
+  }
+};
+
+// Tambah Stasiun Boundary
+$('#add-station-btn').onclick = () => {
+  snapshot();
+  const code = prompt("Masukkan Kode Stasiun (contoh: CN, CNK, BD):", "BARU");
+  if (!code) return;
+  const name = prompt("Masukkan Nama Lengkap Stasiun:", `${code} STATION`);
+  arr('stations').push({ code, name: name || code});
+  sel = { k: 'stations', i: arr('stations').length - 1 };
+  renderProperties();
+  draw();
+};
+
+// Actions
+$('#del').onclick = () => {
+  if (!sel) return;
+  snapshot();
+  arr(sel.k).splice(sel.i, 1);
+  sel = null;
+  renderProperties();
+  draw();
+  showToast('Objek dihapus');
+};
+
+$('#undo').onclick = () => {
+  if (!undoStack.length) return;
+  D = JSON.parse(undoStack.pop());
+  sel = null;
+  renderProperties();
+  renderSchedules();
+  renderRakes();
+  renderStationNames();
+  renderWatermark();
+  draw();
+  showToast('Perubahan diurungkan');
+};
+
+$('#fit').onclick = fit;
+
+// Putar pratinjau 90° (sama dengan game: arah NORMAL / "bawah" menjadi ke kanan). Data tidak berubah.
+$('#rotate-btn').onclick = () => {
+  const w = cv.width / dpr, h = cv.height / dpr;
+  const [cx, cy] = W(w / 2, h / 2);
+  rot = !rot;
+  centerOn(cx, cy);
+  const b = $('#rotate-btn');
+  b.classList.toggle('bg-sky-600', rot);
+  b.classList.toggle('bg-slate-700', !rot);
+  draw();
+  showToast(rot ? 'Pratinjau diputar 90° (kiri ke kanan)' : 'Pratinjau vertikal');
+};
+$('#ids').onchange = draw;
+$('#grid-toggle').onchange = draw;
+
+
+// ===== Enkripsi / Dekripsi format .antd (kompatibel dengan AntdCodec.java) =====
+const ANTD_VER = 1;
+const ANTD_HEADER_LEN = 5;
+const ANTD_IV_LEN = 12;
+
+function antdCheckSupport() {
+  if (!window.crypto || !crypto.subtle) {
+    throw new Error('Web Crypto tidak tersedia. Buka halaman melalui https:// atau localhost.');
+  }
+  if (typeof CompressionStream === 'undefined' || typeof DecompressionStream === 'undefined') {
+    throw new Error('Browser tidak mendukung GZIP (CompressionStream). Gunakan browser yang lebih baru.');
+  }
+}
+
+async function antdKey(secret, usage) {
+  const raw = await crypto.subtle.digest('SHA-256', new TextEncoder().encode('antd-v1|' + secret));
+  return crypto.subtle.importKey('raw', raw, { name: 'AES-GCM' }, false, usage);
+}
+
+async function streamBytes(bytes, stream) {
+  const out = new Blob([bytes]).stream().pipeThrough(stream);
+  return new Uint8Array(await new Response(out).arrayBuffer());
+}
+
+async function antdEncrypt(obj, secret, magic = ANTD_MAGIC) {
+  antdCheckSupport();
+  const head = new Uint8Array([...magic, ANTD_VER]);
+  const iv = crypto.getRandomValues(new Uint8Array(ANTD_IV_LEN));
+  const gz = await streamBytes(new TextEncoder().encode(JSON.stringify(stripLegFields(obj))), new CompressionStream('gzip'));
+  const key = await antdKey(secret, ['encrypt']);
+  const enc = new Uint8Array(await crypto.subtle.encrypt({ name: 'AES-GCM', iv, additionalData: head, tagLength: 128 }, key, gz));
+  const out = new Uint8Array(ANTD_HEADER_LEN + ANTD_IV_LEN + enc.length);
+  out.set(head, 0);
+  out.set(iv, ANTD_HEADER_LEN);
+  out.set(enc, ANTD_HEADER_LEN + ANTD_IV_LEN);
+  return out;
+}
+
+async function antdDecrypt(bytes, secret) {
+  antdCheckSupport();
+  if (!isAntd(bytes)) throw new Error('Bukan berkas .antd yang valid.');
+  if (bytes[4] !== ANTD_VER) throw new Error('Versi berkas .antd tidak didukung.');
+  const iv = bytes.slice(ANTD_HEADER_LEN, ANTD_HEADER_LEN + ANTD_IV_LEN);
+  const ct = bytes.slice(ANTD_HEADER_LEN + ANTD_IV_LEN);
+  const key = await antdKey(secret, ['decrypt']);
+  let gz;
+  try {
+    gz = new Uint8Array(await crypto.subtle.decrypt({ name: 'AES-GCM', iv, additionalData: bytes.slice(0, ANTD_HEADER_LEN), tagLength: 128 }, key, ct));
+  } catch (_) {
+    const e = new Error('Secret salah atau berkas rusak.');
+    e.wrongPassword = true;
+    throw e;
+  }
+  const plain = await streamBytes(gz, new DecompressionStream('gzip'));
+  return JSON.parse(new TextDecoder().decode(plain));
+}
+
+function askPassword({ title, confirm = false, error = '', allowNone = false }) {
+  return new Promise(resolve => {
+    const wrap = document.createElement('div');
+    wrap.className = 'fixed inset-0 z-[9999] flex items-center justify-center bg-black/60';
+    const modeHtml = allowNone ? `
+        <label class="flex items-center gap-2 text-xs mb-1 cursor-pointer"><input type="radio" name="antd-mode" value="secret" checked> Dengan secret (terkunci)</label>
+        <label class="flex items-center gap-2 text-xs mb-3 cursor-pointer"><input type="radio" name="antd-mode" value="none"> Tanpa secret (bebas dibuka siapa saja)</label>` : '';
+    wrap.innerHTML = `
+      <div class="bg-slate-800 border border-slate-600 rounded-lg shadow-2xl p-4 w-80 text-slate-200">
+        <h3 class="text-sm font-semibold mb-3">${title}</h3>
+        ${modeHtml}
+        <div id="antd-fields">
+          <input id="antd-pw" type="password" placeholder="Secret" autocomplete="off"
+            class="w-full bg-slate-900 border border-slate-700 rounded px-2 py-1.5 text-sm mb-2 focus:outline-none focus:border-sky-500">
+          ${confirm ? '<input id="antd-pw2" type="password" placeholder="Ulangi secret" autocomplete="off" class="w-full bg-slate-900 border border-slate-700 rounded px-2 py-1.5 text-sm mb-2 focus:outline-none focus:border-sky-500">' : ''}
+        </div>
+        <p id="antd-note" class="text-[11px] text-amber-400 mb-2 hidden">File tanpa secret bisa dibuka siapa saja yang memiliki berkasnya.</p>
+        <p id="antd-err" class="text-xs text-rose-400 min-h-[1rem] mb-2">${error}</p>
+        <div class="flex justify-end gap-2">
+          <button id="antd-cancel" class="px-3 py-1 rounded text-xs bg-slate-700 hover:bg-slate-600">Batal</button>
+          <button id="antd-ok" class="px-3 py-1 rounded text-xs bg-sky-600 hover:bg-sky-500 font-semibold">OK</button>
+        </div>
+      </div>`;
+    document.body.appendChild(wrap);
+    const pw = wrap.querySelector('#antd-pw'), pw2 = wrap.querySelector('#antd-pw2'), err = wrap.querySelector('#antd-err');
+    const fields = wrap.querySelector('#antd-fields'), note = wrap.querySelector('#antd-note');
+    const noneMode = () => allowNone && wrap.querySelector('input[name="antd-mode"]:checked').value === 'none';
+    wrap.querySelectorAll('input[name="antd-mode"]').forEach(r => r.addEventListener('change', () => {
+      const none = noneMode();
+      fields.classList.toggle('hidden', none);
+      note.classList.toggle('hidden', !none);
+      err.textContent = '';
+      if (!none) pw.focus();
+    }));
+    pw.focus();
+    const close = v => { wrap.remove(); resolve(v); };
+    const submit = () => {
+      if (noneMode()) { close(''); return; }
+      if (!pw.value) { err.textContent = 'Secret tidak boleh kosong.'; return; }
+      if (confirm && pw.value !== pw2.value) { err.textContent = 'Konfirmasi secret tidak sama.'; return; }
+      close(pw.value);
+    };
+    wrap.querySelector('#antd-ok').onclick = submit;
+    wrap.querySelector('#antd-cancel').onclick = () => close(null);
+    wrap.addEventListener('keydown', e => {
+      if (e.key === 'Enter') submit();
+      if (e.key === 'Escape') close(null);
+    });
+  });
+}
+
+function applyLoaded(obj, kind) {
+  if (kind === 'ants') {
+    if (!D.map_id) throw new Error('Buka layout (.antd) dulu sebelum membuka jadwal (.ants).');
+    if (obj.for_map !== D.map_id) {
+      throw new Error(`Jadwal ini untuk peta ${obj.for_map || '(tanpa kode)'} ${obj.map_name ? '(' + obj.map_name + ')' : ''}, peta aktif: ${D.map_id}`);
+    }
+    snapshot();
+    SCHED_KEYS.forEach(k => { if (k in obj) D[k] = obj[k]; else delete D[k]; });
+    renderProperties(); renderSchedules(); renderRakes(); draw();
+    showToast('Jadwal (.ants) dimuat');
+    return;
+  }
+  if (kind === 'antd' && D.map_id && D.map_id === obj.map_id) {
+    SCHED_KEYS.forEach(k => { if (k in D) obj[k] = D[k]; });   // peta sama: jadwal aktif dipertahankan
+  }
+  const made = ensureMapId(obj);
+  loadData(obj);
+  if (made) showToast('Peta belum punya map_id, dibuat: ' + obj.map_id + '. Simpan ulang.');
+}
+
+async function openFile(f, only) {
+  try {
+    const bytes = new Uint8Array(await f.arrayBuffer());
+    const kind = antdKind(bytes);
+    if (only && kind !== only) {
+      throw new Error(`"${f.name}" bukan berkas jadwal (.ants).`);
+    }
+    if (only === 'ants' && !D.map_id) {
+      throw new Error('Buka layout (.antd) dulu sebelum membuka jadwal (.ants).');
+    }
+    if (kind) {
+      try {
+        applyLoaded(await antdDecrypt(bytes, ''), kind);
+        return;
+      } catch (x) { if (!x.wrongPassword) throw x; }
+      let err = '';
+      while (true) {
+        const pw = await askPassword({ title: 'Masukkan secret untuk membuka ' + f.name, error: err });
+        if (pw === null) return;
+        try {
+          applyLoaded(await antdDecrypt(bytes, pw), kind);
+          return;
+        } catch (x) {
+          if (!x.wrongPassword) throw x;
+          err = x.message;
+        }
+      }
+    } else {
+      applyLoaded(JSON.parse(new TextDecoder().decode(bytes)), 'json');
+    }
+  } catch (x) {
+    alert('Gagal membuka berkas: ' + x.message);
+  }
+}
+
+$('#file').onchange = async e => {
+  const f = e.target.files[0];
+  e.target.value = '';
+  if (f) await openFile(f);
+};
+$('#file-ants').onchange = async e => {
+  const f = e.target.files[0];
+  e.target.value = '';
+  if (f) await openFile(f, 'ants');
+};
+
+function layoutPart() {
+  const o = {};
+  for (const k in D) if (!SCHED_KEYS.includes(k)) o[k] = D[k];
+  return o;
+}
+function schedulePart() {
+  const o = { for_map: D.map_id, map_name: D.station_name || '' };
+  SCHED_KEYS.forEach(k => { if (k in D) o[k] = D[k]; });
+  return o;
+}
+function fileBase() {
+  return (D.station_name || 'stasiun').toLowerCase().replace(/\s+/g, '_');
+}
+async function saveEncrypted(obj, ext, magic) {
+  const pw = await askPassword({ title: 'Simpan ' + ext, confirm: true, allowNone: true });
+  if (pw === null) return;
+  const bytes = await antdEncrypt(obj, pw, magic);
+  const url = URL.createObjectURL(new Blob([bytes], { type: 'application/octet-stream' }));
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = fileBase() + ext;
+  a.click();
+  URL.revokeObjectURL(url);
+  showToast(`Berkas ${ext} berhasil diunduh` + (pw === '' ? ' (tanpa secret)' : ''));
+}
+
+$('#download-antd-btn').onclick = async () => {
+  try {
+    if (ensureMapId(D)) showToast('map_id baru dibuat: ' + D.map_id);
+    await saveEncrypted(layoutPart(), '.antd', ANTD_MAGIC);
+  } catch (x) { showToast('Gagal enkripsi: ' + x.message, true); }
+};
+$('#download-ants-btn').onclick = async () => {
+  try {
+    if (ensureMapId(D)) showToast('map_id baru dibuat: ' + D.map_id + ' (simpan juga .antd)');
+    await saveEncrypted(schedulePart(), '.ants', ANTS_MAGIC);
+  } catch (x) { showToast('Gagal enkripsi: ' + x.message, true); }
+};
+
+// Download JSON
+$('#download-json-btn').onclick = () => {
+  stripLegFields(D);
+  const jsonStr = JSON.stringify(D, null, 2);
+  const blob = new Blob([jsonStr], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `${(D.station_name || 'stasiun').toLowerCase().replace(/\s+/g, '_')}.json`;
+  a.click();
+  URL.revokeObjectURL(url);
+  showToast('Berkas JSON berhasil diunduh');
+};
+
+const ANTD_MAGIC = [0x41, 0x4E, 0x54, 0x44]; // "ANTD" layout
+const ANTS_MAGIC = [0x41, 0x4E, 0x54, 0x53]; // "ANTS" jadwal
+const SCHED_KEYS = ['schedules', 'rakes', 'startTime', 'endTime', 'power'];
+
+function genMapId() {
+  const b = crypto.getRandomValues(new Uint8Array(5));
+  return 'M-' + [...b].map(x => x.toString(16).padStart(2, '0')).join('').toUpperCase();
+}
+function ensureMapId(o) {
+  if (o.map_id) return false;
+  o.map_id = genMapId();
+  return true;
+}
+function antdKind(b) {
+  if (b.length < ANTD_HEADER_LEN + ANTD_IV_LEN) return null;
+  const m = [...b.slice(0, 4)].join();
+  if (m === ANTD_MAGIC.join()) return 'antd';
+  if (m === ANTS_MAGIC.join()) return 'ants';
+  return null;
+}
+const isAntd = b => antdKind(b) !== null;
+
+function el(t, a, ...c) {
+  const e = document.createElement(t);
+  for (const k in a || {}) {
+    if (k === 'className') e.className = a[k];
+    else if (k === 'style') e.style.cssText = a[k];
+    else e[k] = a[k];
+  }
+  c.forEach(x => {
+    if (typeof x === 'string' || typeof x === 'number') e.appendChild(document.createTextNode(x));
+    else if (x) e.appendChild(x);
+  });
+  return e;
+}
+
+// Side Panel: Tab Properti
+function renderProperties() {
+  const box = $('#pp');
+  box.innerHTML = '';
+
+  if (!sel) {
+    const header = el('div', { className: 'font-semibold text-slate-200 mb-2 pb-1 border-b border-slate-700 flex justify-between items-center' }, 'Data General Stasiun');
+    box.append(header);
+    ['station_name', 'startTime', 'endTime'].forEach(k => box.append(createFieldRow(D, k, '', false)));
+
+    box.append(el('div', { className: 'font-semibold text-indigo-400 mt-4 mb-2 pb-1 border-b border-slate-700 flex justify-between items-center' },
+      'Daftar Area Stasiun (stations)',
+      el('button', {
+        className: 'bg-indigo-600 hover:bg-indigo-500 text-white px-2 py-0.5 rounded text-xs transition font-normal',
+        onclick: () => {
+          snapshot();
+          arr('stations').push({ code: 'NEW', name: 'STASIUN BARU'});
+          renderProperties();
+          draw();
+        }
+      }, '+ Stasiun')
+    ));
+
+    arr('stations').forEach((st, idx) => {
+      const stRow = el('div', { className: 'bg-slate-900/80 p-2 rounded border border-slate-700/80 space-y-1.5 mb-2' },
+        el('div', { className: 'flex justify-between items-center' },
+          el('span', { className: 'font-bold text-xs text-indigo-300' }, `${st.code || 'ST'} - ${st.name || ''}`),
+          el('button', {
+            className: 'text-rose-400 hover:text-rose-300 font-bold px-1',
+            onclick: () => {
+              snapshot();
+              arr('stations').splice(idx, 1);
+              renderProperties();
+              draw();
+            }
+          }, '×')
+        )
+      );
+      ['code', 'name'].forEach(field => stRow.append(createFieldRow(st, field, 'stations', true)));
+      box.append(stRow);
+    });
+
+    box.append(el('p', { className: 'text-xs text-slate-400 mt-3 italic' }, 'Ketuk objek apa pun di kanvas untuk mengedit propertinya secara rinci. Gunakan Ctrl+C / Ctrl+V untuk menyalin objek.'));
+    return;
+  }
+
+  const o = arr(sel.k)[sel.i];
+  if (!o) return;
+
+  box.append(el('div', { className: 'font-semibold text-sky-400 border-b border-slate-700 pb-1 mb-2' }, `${KIND[sel.k]} Properti`));
+
+  for (const k in o) {
+    if (sel.k === 'tracks' && o.type === 'END' && k === 'spawn') continue;   // diganti checkbox di bawah
+    if (sel.k === 'switches' && k === 'pair') continue;                        // diganti dropdown di bawah
+    box.append(createFieldRow(o, k, sel.k, true));
+  }
+
+  if (sel.k === 'tracks' && o.type === 'END') {
+    const spRow = el('label', { className: 'flex items-center gap-2 mt-2 text-xs text-slate-300 cursor-pointer' });
+    const cb = el('input', { type: 'checkbox', checked: o.spawn === true || o.spawn === 'true', className: 'rounded bg-slate-900 border-slate-700 text-sky-500' });
+    cb.onchange = () => {
+      snapshot();
+      if (cb.checked) o.spawn = true; else delete o.spawn;
+      renderProperties();
+      draw();
+    };
+    spRow.append(cb, el('span', {}, 'Bisa spawn juga (SPAWN + END dalam satu track)'));
+    box.append(spRow);
+  }
+
+  if (sel.k === 'switches') {
+    const prow = el('div', { className: 'flex items-center gap-2 mt-2' },
+      el('label', { className: 'w-24 text-xs font-medium text-slate-400 shrink-0 truncate' }, 'pair'));
+    const psel = el('select', { className: 'flex-1 bg-slate-900 border border-slate-700 rounded px-2 py-1 text-xs text-slate-200 focus:outline-none' });
+    psel.append(el('option', { value: '' }, '(tidak berpasangan)'));
+    arr('switches').forEach(x => {
+      if (x !== o && x.id) psel.append(el('option', { value: x.id, selected: x.id === o.pair }, x.id));
+    });
+    psel.onchange = () => {
+      snapshot();
+      if (psel.value) o.pair = psel.value; else delete o.pair;
+      draw();
+    };
+    prow.append(psel);
+    box.append(prow, el('p', { className: 'text-[11px] text-slate-500 mt-1' }, 'Dua wesel berpasangan digerakkan dengan satu tombol di game.'));
+  }
+
+  const nk = el('input', { placeholder: 'Field baru...', className: 'flex-1 bg-slate-900 border border-slate-700 rounded px-2 py-1 text-xs text-slate-200 focus:outline-none focus:border-sky-500' });
+  const add = el('button', {
+    className: 'bg-slate-700 hover:bg-slate-600 text-slate-200 px-2.5 py-1 rounded text-xs transition',
+    onclick: () => {
+      if (!nk.value || nk.value in o) return;
+      snapshot();
+      o[nk.value] = '';
+      renderProperties();
+    }
+  }, '+ Field');
+
+  box.append(el('div', { className: 'flex gap-1.5 mt-3 pt-2 border-t border-slate-700/60' }, nk, add));
+}
+
+function createFieldRow(o, k, kind, hist) {
+  const row = el('div', { className: 'flex items-center gap-2 mb-2' }, el('label', { className: 'w-24 text-xs font-medium text-slate-400 shrink-0 truncate' }, k));
+  const v = o[k];
+  let inp;
+
+  let opts = ENUM[k];
+  if (opts && !Array.isArray(opts)) opts = opts[kind];
+
+  const set = val => {
+    if (hist) snapshot();
+    o[k] = val;
+    draw();
+    if (k === 'id' || k === 'name' || k === 'code' || k === 'no') updateStatusText();
+  };
+
+  if (opts) {
+    inp = el('select', { className: 'flex-1 bg-slate-900 border border-slate-700 rounded px-2 py-1 text-xs text-slate-200 focus:outline-none' });
+    opts.concat(opts.includes(v) ? [] : [v]).forEach(x => {
+      inp.append(el('option', { value: x, selected: x === v }, x));
+    });
+    inp.onchange = () => set(inp.value);
+  } else if (typeof v === 'boolean') {
+    inp = el('input', { type: 'checkbox', checked: v, className: 'rounded bg-slate-900 border-slate-700 text-sky-500' });
+    inp.onchange = () => set(inp.checked);
+  } else if (typeof v === 'number') {
+    inp = el('input', { type: 'number', step: 'any', value: v, className: 'flex-1 bg-slate-900 border border-slate-700 rounded px-2 py-1 text-xs text-slate-200 focus:outline-none' });
+    inp.onchange = () => set(parseFloat(inp.value));
+  } else if (typeof v === 'object') {
+    inp = el('input', { value: JSON.stringify(v), className: 'flex-1 bg-slate-900 border border-slate-700 rounded px-2 py-1 text-xs text-slate-200 focus:outline-none' });
+    inp.onchange = () => {
+      try { set(JSON.parse(inp.value)); } catch (_) { inp.style.borderColor = '#ef4444'; }
+    };
+  } else {
+    inp = el('input', { value: v ?? '', className: 'flex-1 bg-slate-900 border border-slate-700 rounded px-2 py-1 text-xs text-slate-200 focus:outline-none' });
+    inp.onchange = () => set(inp.value);
+  }
+
+  row.append(inp);
+
+  if (hist && k !== 'id') {
+    row.append(el('button', {
+      className: 'text-rose-400 hover:text-rose-300 font-bold px-1.5 py-0.5 rounded hover:bg-slate-700 transition',
+      title: 'Hapus field',
+      onclick: () => {
+        snapshot();
+        delete o[k];
+        renderProperties();
+        draw();
+      }
+    }, '×'));
+  }
+  return row;
+}
+
+// Side Panel: Tab Jadwal Kereta Api
+const SC = ['no', 'n', 't', 'm', 'dari', 'tujuan', 'sb', 'tb', 'sT', 'xT', 'tT', 'sW', 'aT', 'dT', 'nc', 'll', 'cl', 'cg', 'fin'];
+const NUM = ['sT', 'xT', 'tT', 'nc', 'll', 'cl', 'cg'];
+
+// tT (peron tujuan) boleh satu angka atau beberapa pilihan peron:
+//   "222"            -> 222
+//   "222,223"        -> [222, 223]   (juga boleh "222 223", "222/223", "[222,223]")
+//   "[222]"          -> [222]        (array isi satu = sama dengan 222 di game)
+function parseTT(str) {
+  const raw = String(str).trim();
+  if (raw === '') return undefined;
+  const parts = raw.replace(/[\[\]]/g, ' ').split(/[\s,;\/]+/).filter(x => x !== '').map(Number).filter(n => isFinite(n));
+  if (!parts.length) return undefined;
+  const isList = /[\[,;\/]/.test(raw) || /\S\s+\S/.test(raw);
+  return isList ? parts : parts[0];
+}
+const showTT = v => Array.isArray(v) ? v.join(',') : (v === undefined ? '' : v);
+
+// Simpan nilai satu kolom jadwal/leg dari input teks
+function setSchedField(obj, f, text) {
+  if (text === '') { delete obj[f]; return; }
+  if (f === 'tT') {
+    const v = parseTT(text);
+    if (v === undefined) delete obj[f]; else obj[f] = v;
+  } else {
+    obj[f] = NUM.includes(f) ? parseFloat(text) : text;
+  }
+}
+
+function schedInput(obj, f, width) {
+  const v = obj[f];
+  const inp = el('input', {
+    value: f === 'tT' ? showTT(v) : (v === undefined ? '' : v),
+    className: 'bg-slate-900 border border-slate-700 rounded px-1.5 py-0.5 text-xs text-slate-200 focus:outline-none w-16'
+  });
+  if (width) inp.style.width = width;
+  if (f === 'tT') {
+    inp.style.width = '76px';
+    inp.title = 'Peron tujuan: satu ID track (222) atau beberapa pilihan dipisah koma (222,223)';
+    inp.placeholder = '222,223';
+  }
+  inp.onchange = () => {
+    snapshot();
+    setSchedField(obj, f, inp.value.trim());
+    if (f === 'tT') inp.value = showTT(obj[f]);
+  };
+  return inp;
+}
+
+function renderSchedules() {
+  const box = $('#sc');
+  box.innerHTML = '';
+  const wrap = el('div', { className: 'overflow-x-auto border border-slate-700 rounded-lg' });
+  const tb = el('table', { className: 'w-full text-left text-xs text-slate-300 border-collapse' });
+
+  const hr = el('tr', { className: 'bg-slate-900 border-b border-slate-700' });
+  hr.append(el('th', { className: 'p-2 w-8' }));
+  hr.append(el('th', { className: 'p-2 font-semibold text-amber-400 border-r border-slate-800' }, 'Legs'));
+  SC.forEach(c => hr.append(el('th', { className: 'p-2 font-semibold text-slate-400 border-r border-slate-800' }, c)));
+  tb.append(hr);
+
+  arr('schedules').forEach((s, i) => {
+    const tr = el('tr', { className: 'border-b border-slate-800 hover:bg-slate-800/40' });
+    tr.append(el('td', { className: 'p-1 text-center' }, el('button', {
+      className: 'text-rose-400 hover:text-rose-300 font-bold px-1',
+      onclick: () => {
+        snapshot();
+        arr('schedules').splice(i, 1);
+        renderSchedules();
+      }
+    }, '×')));
+
+    // Tombol Leg Config
+    const legCount = Array.isArray(s.legs) ? s.legs.length : 0;
+    const legBtn = el('button', {
+      className: `px-2 py-0.5 rounded text-[11px] font-semibold transition ${legCount > 0 ? 'bg-indigo-600 text-white hover:bg-indigo-500' : 'bg-slate-700 text-slate-300 hover:bg-slate-600'}`,
+      onclick: () => openLegsModal(i)
+    }, `Legs (${legCount})`);
+    tr.append(el('td', { className: 'p-1 border-r border-slate-800/50 text-center' }, legBtn));
+
+    SC.forEach(c => {
+      tr.append(el('td', { className: 'p-1 border-r border-slate-800/50' }, schedInput(s, c, c === 'n' ? '110px' : null)));
+    });
+    tb.append(tr);
+  });
+
+  wrap.append(tb);
+
+  const addBtn = el('button', {
+    className: 'bg-sky-600 hover:bg-sky-500 text-white px-3 py-1.5 rounded text-xs font-medium transition mb-2 shadow flex items-center gap-1',
+    onclick: () => {
+      snapshot();
+      arr('schedules').push({ no: 'KA ' + (arr('schedules').length + 1), n: 'Baru', t: 'PASSENGER', sb: false, tb: false, sT: 0, tT: 0, sW: '0000', aT: '0000', dT: '0000', nc: 10, ll: 15.5, cl: 20, cg: 1, fin: false });
+      renderSchedules();
+    }
+  }, '+ Tambah Kereta');
+
+  const note = el('p', { className: 'text-[11px] text-slate-500 mb-2' },
+    'tT: isi satu peron (222) atau beberapa pilihan peron dipisah koma (222,223). Peron pertama = peron utama; kereta boleh berhenti di peron mana pun dalam daftar tanpa penalti.');
+
+  box.append(addBtn, note, wrap);
+}
+
+// Atribut leg yang redundan (sudah ada di level jadwal utama) -> dibuang
+const LEG_STRIP = ['dari', 'tujuan', 'sT', 'xT', 'sW'];
+function stripLegFields(data) {
+  const sc = data && data.schedules;
+  if (!Array.isArray(sc)) return data;
+  sc.forEach(s => {
+    if (!s || !Array.isArray(s.legs)) return;
+    s.legs.forEach(l => { if (l && typeof l === 'object') LEG_STRIP.forEach(f => delete l[f]); });
+  });
+  return data;
+}
+
+// Modal Editor Legs Kereta
+const LEG_FIELDS = ['tT', 'aT', 'dT', 'nc'];
+function openLegsModal(index) {
+  activeLegsIndex = index;
+  const s = arr('schedules')[index];
+  if (!s) return;
+  if (!Array.isArray(s.legs)) s.legs = [];
+
+  $('#legs-title').textContent = `Pengaturan Legs — ${s.no || 'KA'} (${s.n || ''})`;
+  renderLegsList();
+
+  const m = $('#legs-modal');
+  m.classList.remove('hidden');
+  m.classList.add('flex');
+}
+
+function renderLegsList() {
+  const s = arr('schedules')[activeLegsIndex];
+  const body = $('#legs-body');
+  body.innerHTML = '';
+
+  if (!s.legs.length) {
+    body.append(el('div', { className: 'text-slate-400 text-xs italic py-4 text-center' }, 'Belum ada leg untuk kereta ini. Klik "+ Tambah Leg" untuk membuat rute leg beruntun.'));
+    return;
+  }
+
+  const wrap = el('div', { className: 'overflow-x-auto border border-slate-700 rounded-lg' });
+  const tb = el('table', { className: 'w-full text-left text-xs text-slate-300 border-collapse' });
+
+  const hr = el('tr', { className: 'bg-slate-900 border-b border-slate-700' });
+  hr.append(el('th', { className: 'p-2 w-8' }));
+  hr.append(el('th', { className: 'p-2 font-semibold text-slate-400 border-r border-slate-800' }, '↕'));
+  hr.append(el('th', { className: 'p-2 font-semibold text-slate-400 border-r border-slate-800' }, '#'));
+  LEG_FIELDS.forEach(f => hr.append(el('th', { className: 'p-2 font-semibold text-slate-400 border-r border-slate-800' }, f)));
+  tb.append(hr);
+
+  s.legs.forEach((leg, i) => {
+    const tr = el('tr', { className: 'border-b border-slate-800 hover:bg-slate-800/40' });
+    tr.append(el('td', { className: 'p-1 text-center' }, el('button', {
+      className: 'text-rose-400 hover:text-rose-300 font-bold px-1',
+      onclick: () => {
+        snapshot();
+        s.legs.splice(i, 1);
+        renderLegsList();
+      }
+    }, '×')));
+    const moveLeg = (dir) => {
+      const j = i + dir;
+      if (j < 0 || j >= s.legs.length) return;
+      snapshot();
+      [s.legs[i], s.legs[j]] = [s.legs[j], s.legs[i]];
+      renderLegsList();
+    };
+    const mkMoveBtn = (label, dir, title) => {
+      const disabled = (i + dir < 0) || (i + dir >= s.legs.length);
+      return el('button', {
+        className: 'px-1.5 py-0.5 rounded text-[11px] leading-none bg-slate-700 text-slate-200 ' + (disabled ? '' : 'hover:bg-slate-600'),
+        style: disabled ? 'opacity:.3;cursor:default' : '',
+        title,
+        disabled,
+        onclick: () => moveLeg(dir)
+      }, label);
+    };
+    tr.append(el('td', { className: 'p-1 border-r border-slate-800/50 text-center whitespace-nowrap' },
+      el('div', { className: 'inline-flex gap-1' }, mkMoveBtn('▲', -1, 'Geser ke atas'), mkMoveBtn('▼', 1, 'Geser ke bawah'))));
+    tr.append(el('td', { className: 'p-1 border-r border-slate-800/50 text-center font-mono font-bold text-slate-400' }, i + 1));
+
+    LEG_FIELDS.forEach(f => {
+      tr.append(el('td', { className: 'p-1 border-r border-slate-800/50' }, schedInput(leg, f, null)));
+    });
+
+    tb.append(tr);
+  });
+
+  wrap.append(tb);
+  body.append(wrap);
+  body.append(el('p', { className: 'text-[11px] text-slate-500' }, 'tT per leg juga boleh beberapa pilihan peron, mis. 222,223.'));
+}
+
+$('#legs-add-btn').onclick = () => {
+  const s = arr('schedules')[activeLegsIndex];
+  if (!s) return;
+  snapshot();
+  s.legs.push({
+    tT: Array.isArray(s.tT) ? s.tT.slice() : (s.tT || 0),
+    aT: s.aT || '0000',
+    dT: s.dT || '0000'
+  });
+  renderLegsList();
+};
+
+const closeLegsModal = () => {
+  $('#legs-modal').classList.add('hidden');
+  $('#legs-modal').classList.remove('flex');
+  renderSchedules();
+};
+$('#legs-close').onclick = closeLegsModal;
+$('#legs-ok').onclick = closeLegsModal;
+
+// Side Panel: Tab Rakes (Rangkaian Standby)
+const RK = ['no', 'n', 't', 'track', 'm', 'pos', 'nc', 'cl', 'cg'];
+const RK_NUM = ['track', 'pos', 'nc', 'cl', 'cg'];
+
+function renderRakes() {
+  const box = $('#rk');
+  box.innerHTML = '';
+  const wrap = el('div', { className: 'overflow-x-auto border border-slate-700 rounded-lg' });
+  const tb = el('table', { className: 'w-full text-left text-xs text-slate-300 border-collapse' });
+
+  const hr = el('tr', { className: 'bg-slate-900 border-b border-slate-700' });
+  hr.append(el('th', { className: 'p-2 w-8' }));
+  RK.forEach(c => hr.append(el('th', { className: 'p-2 font-semibold text-slate-400 border-r border-slate-800' }, c)));
+  tb.append(hr);
+
+  arr('rakes').forEach((r, i) => {
+    const tr = el('tr', { className: 'border-b border-slate-800 hover:bg-slate-800/40' });
+    tr.append(el('td', { className: 'p-1 text-center' }, el('button', {
+      className: 'text-rose-400 hover:text-rose-300 font-bold px-1',
+      onclick: () => {
+        snapshot();
+        arr('rakes').splice(i, 1);
+        renderRakes();
+        draw();
+      }
+    }, '×')));
+
+    RK.forEach(c => {
+      const v = r[c];
+      let inp;
+      if (c === 't') {
+        inp = el('select', { className: 'bg-slate-900 border border-slate-700 rounded px-1.5 py-0.5 text-xs text-slate-200 focus:outline-none' });
+        ['PASSENGER', 'FREIGHT'].forEach(opt => inp.append(el('option', { value: opt, selected: opt === v }, opt)));
+        inp.onchange = () => { snapshot(); r.t = inp.value; draw(); };
+      } else if (c === 'm') {
+        inp = el('select', { className: 'bg-slate-900 border border-slate-700 rounded px-1.5 py-0.5 text-xs text-slate-200 focus:outline-none' });
+        ['NORMAL', 'REVERSE'].forEach(opt => inp.append(el('option', { value: opt, selected: opt === v }, opt)));
+        inp.onchange = () => { snapshot(); r.m = inp.value; draw(); };
+      } else {
+        inp = el('input', {
+          value: v === undefined ? '' : v,
+          className: 'bg-slate-900 border border-slate-700 rounded px-1.5 py-0.5 text-xs text-slate-200 focus:outline-none w-16'
+        });
+        if (c === 'n') inp.style.width = '110px';
+        inp.onchange = () => {
+          snapshot();
+          if (inp.value === '') delete r[c];
+          else r[c] = RK_NUM.includes(c) ? parseFloat(inp.value) : inp.value;
+          draw();
+        };
+      }
+      tr.append(el('td', { className: 'p-1 border-r border-slate-800/50' }, inp));
+    });
+    tb.append(tr);
+  });
+
+  wrap.append(tb);
+
+  const addBtn = el('button', {
+    className: 'bg-amber-600 hover:bg-amber-500 text-white px-3 py-1.5 rounded text-xs font-medium transition mb-2 shadow flex items-center gap-1',
+    onclick: () => {
+      snapshot();
+      arr('rakes').push({ no: 'RK ' + (arr('rakes').length + 1), n: 'Rake Standby', t: 'PASSENGER', track: arr('tracks')[0]?.id || 1, m: 'NORMAL', pos: 0.5, nc: 10, cl: 20, cg: 1 });
+      renderRakes();
+      draw();
+    }
+  }, '+ Tambah Rake Standby');
+
+  box.append(addBtn, wrap);
+}
+
+// Side Panel: Tab Watermark
+function renderWatermark() {
+  const box = $('#wm');
+  box.innerHTML = '';
+
+  const header = el('div', { className: 'font-semibold text-sky-400 border-b border-slate-700 pb-1 mb-3' }, 'Pengaturan Identitas & Watermark');
+  box.append(header);
+
+  const row = el('div', { className: 'flex flex-col gap-1.5 mb-3' });
+  row.append(el('label', { className: 'text-xs font-medium text-slate-400' }, 'Nama Pembuat (Author)'));
+
+  const inp = el('input', {
+    value: D.author || '',
+    placeholder: 'Contoh: NAMA_KAMU',
+    className: 'bg-slate-900 border border-slate-700 rounded px-2 py-1.5 text-xs text-slate-200 focus:outline-none focus:border-sky-500 w-full'
+  });
+
+  // Update data saat input diubah
+  inp.onchange = () => {
+    snapshot();
+    if (inp.value.trim() === '') {
+      delete D.author;
+    } else {
+      D.author = inp.value;
+    }
+  };
+
+  row.append(inp);
+  box.append(row);
+
+  box.append(el('p', { className: 'text-[11px] text-slate-500 mt-2' }, 'Nama ini akan tersimpan pada bagian "author" di JSON sebagai watermark file stasiun ini.'));
+}
+
+// Side Panel: Tab Kamus Stasiun (station_names)
+function renderStationNames() {
+  const box = $('#sn');
+  box.innerHTML = '';
+
+  const names = objMap('station_names');
+
+  const wrap = el('div', { className: 'overflow-x-auto border border-slate-700 rounded-lg mb-3' });
+  const tb = el('table', { className: 'w-full text-left text-xs text-slate-300 border-collapse' });
+
+  const hr = el('tr', { className: 'bg-slate-900 border-b border-slate-700' });
+  hr.append(el('th', { className: 'p-2 w-8' }));
+  hr.append(el('th', { className: 'p-2 font-semibold text-slate-400 border-r border-slate-800' }, 'Kode'));
+  hr.append(el('th', { className: 'p-2 font-semibold text-slate-400' }, 'Nama Lengkap Stasiun'));
+  tb.append(hr);
+
+  Object.keys(names).forEach(code => {
+    const tr = el('tr', { className: 'border-b border-slate-800 hover:bg-slate-800/40' });
+
+    tr.append(el('td', { className: 'p-1 text-center' }, el('button', {
+      className: 'text-rose-400 hover:text-rose-300 font-bold px-1',
+      onclick: () => {
+        snapshot();
+        delete names[code];
+        renderStationNames();
+      }
+    }, '×')));
+
+    const codeInp = el('input', {
+      value: code,
+      className: 'bg-slate-900 border border-slate-700 rounded px-1.5 py-0.5 text-xs text-slate-200 focus:outline-none w-20 font-mono uppercase'
+    });
+    codeInp.onchange = () => {
+      const newCode = codeInp.value.trim().toUpperCase();
+      if (!newCode || newCode === code) return;
+      snapshot();
+      const val = names[code];
+      delete names[code];
+      names[newCode] = val;
+      renderStationNames();
+    };
+    tr.append(el('td', { className: 'p-1 border-r border-slate-800/50' }, codeInp));
+
+    const nameInp = el('input', {
+      value: names[code],
+      className: 'bg-slate-900 border border-slate-700 rounded px-1.5 py-0.5 text-xs text-slate-200 focus:outline-none w-full'
+    });
+    nameInp.onchange = () => {
+      snapshot();
+      names[code] = nameInp.value;
+    };
+    tr.append(el('td', { className: 'p-1' }, nameInp));
+
+    tb.append(tr);
+  });
+
+  wrap.append(tb);
+
+  const addBtn = el('button', {
+    className: 'bg-indigo-600 hover:bg-indigo-500 text-white px-3 py-1.5 rounded text-xs font-medium transition shadow flex items-center gap-1',
+    onclick: () => {
+      snapshot();
+      let newCode = "BARU";
+      let count = 1;
+      while (names[newCode]) {
+        newCode = "BARU" + count++;
+      }
+      names[newCode] = "Nama Stasiun Baru";
+      renderStationNames();
+    }
+  }, '+ Kode Stasiun');
+
+  box.append(addBtn, wrap);
+}
+
+function exportJSON() {
+  stripLegFields(D);
+  $('#ta').value = JSON.stringify(D, null, 2);
+}
+
+// Listener switching tab side panel
+document.querySelectorAll('#tabs button').forEach(b => {
+  b.onclick = () => {
+    document.querySelectorAll('#tabs button').forEach(x => {
+      const active = x === b;
+      x.classList.toggle('text-sky-400', active);
+      x.classList.toggle('border-sky-400', active);
+      x.classList.toggle('text-slate-400', !active);
+      x.classList.toggle('border-transparent', !active);
+    });
+
+    document.querySelectorAll('.pane').forEach(p => {
+      p.classList.toggle('hidden', p.id !== b.dataset.p);
+      p.classList.toggle('flex', p.id === b.dataset.p && p.id === 'js');
+    });
+
+    if (b.dataset.p === 'js') exportJSON();
+    if (b.dataset.p === 'sc') renderSchedules();
+    if (b.dataset.p === 'rk') renderRakes();
+    if (b.dataset.p === 'sn') renderStationNames();
+    if (b.dataset.p === 'wm') renderWatermark();
+  };
+});
+
+$('#apply').onclick = () => {
+  try {
+    const n = stripLegFields(JSON.parse($('#ta').value));
+    snapshot();
+    D = n;
+    sel = null;
+    renderProperties();
+    renderSchedules();
+    renderRakes();
+    renderStationNames();
+    renderWatermark();
+    fit();
+    $('#msg').textContent = 'Berhasil diterapkan!';
+    showToast('JSON berhasil diterapkan');
+    setTimeout(() => $('#msg').textContent = '', 3000);
+  } catch (e) {
+    $('#msg').textContent = 'Error: ' + e.message;
+    showToast('Format JSON salah!', true);
+  }
+};
+
+$('#copy').onclick = async () => {
+  exportJSON();
+  try {
+    await navigator.clipboard.writeText($('#ta').value);
+    $('#msg').textContent = 'Tersalin!';
+    showToast('Teks JSON tersalin ke clipboard');
+    setTimeout(() => $('#msg').textContent = '', 3000);
+  } catch (_) {
+    $('#ta').select();
+    document.execCommand('copy');
+    $('#msg').textContent = 'Tersalin!';
+    showToast('Teks JSON tersalin ke clipboard');
+    setTimeout(() => $('#msg').textContent = '', 3000);
+  }
+};
+
+function loadData(obj) {
+  snapshot();
+  D = stripLegFields(obj);
+  sel = null;
+  renderProperties();
+  renderSchedules();
+  renderRakes();
+  renderStationNames();
+  renderWatermark();
+  fit();
+}
+
+$('#file').onchange = async e => {
+  const f = e.target.files[0];
+  e.target.value = '';
+  if (!f) return;
+  try {
+    const bytes = new Uint8Array(await f.arrayBuffer());
+    if (isAntd(bytes)) {
+      try {
+        loadData(await antdDecrypt(bytes, ''));
+        showToast('Berkas .antd (tanpa secret) berhasil dimuat');
+        return;
+      } catch (x) {
+        if (!x.wrongPassword) throw x;
+      }
+      let err = '';
+      while (true) {
+        const pw = await askPassword({ title: 'Masukkan secret untuk membuka ' + f.name, error: err });
+        if (pw === null) return;
+        try {
+          loadData(await antdDecrypt(bytes, pw));
+          showToast('Berkas .antd berhasil didekripsi dan dimuat');
+          return;
+        } catch (x) {
+          if (!x.wrongPassword) throw x;
+          err = x.message;
+        }
+      }
+    } else {
+      loadData(JSON.parse(new TextDecoder().decode(bytes)));
+      showToast('Berkas JSON berhasil dimuat');
+    }
+  } catch (x) {
+    alert('Gagal membuka berkas: ' + x.message);
+  }
+};
+
+
+// ===== Compile: cek error + normalisasi Start < End =====
+function compileProject() {
+  stripLegFields(D);
+  const before = JSON.stringify(D);
+  const fixes = [], errors = [], warns = [];
+  const isNum = v => typeof v === 'number' && isFinite(v);
+  const toNum = v => (typeof v === 'string' && v.trim() !== '' && isFinite(Number(v))) ? Number(v) : v;
+  const lbl = (k, o) => `${KIND[k]} ${o.id ?? o.name ?? o.code ?? o.no ?? '?'}`;
+  const add = (list, k, i, msg) => list.push({ k, i, msg });
+
+  // Konversi field numerik bertipe string -> number
+  const coerce = (k, o, i, fields) => fields.forEach(f => {
+    if (f in o && typeof o[f] === 'string') {
+      const n = toNum(o[f]);
+      if (isNum(n)) { o[f] = n; add(fixes, k, i, `${lbl(k, o)}: "${f}" diubah dari teks ke angka`); }
+    }
+  });
+
+    if (!D.map_id) { D.map_id = genMapId(); fixes.push({ k: 'tracks', i: -1, msg: 'map_id dibuat: ' + D.map_id }); }
+
+  // ---- TRACKS ----
+  const tracks = arr('tracks');
+  const swappedIds = new Set();
+  const idSeen = new Map();
+  tracks.forEach((t, i) => {
+    coerce('tracks', t, i, ['startX', 'startY', 'endX', 'endY', 'length', 'speed']);
+    if (t.id === undefined || t.id === null || t.id === '') add(errors, 'tracks', i, `Track #${i + 1}: ID kosong`);
+    else if (idSeen.has(t.id)) add(errors, 'tracks', i, `${lbl('tracks', t)}: ID duplikat (sama dengan track #${idSeen.get(t.id) + 1})`);
+    else idSeen.set(t.id, i);
+
+    const coordsOk = ['startX', 'startY', 'endX', 'endY'].every(f => isNum(t[f]));
+    if (!coordsOk) {
+      add(errors, 'tracks', i, `${lbl('tracks', t)}: koordinat Start/End tidak lengkap atau bukan angka`);
+    } else if (t.startX === t.endX && t.startY === t.endY) {
+      add(errors, 'tracks', i, `${lbl('tracks', t)}: titik Start dan End sama (panjang nol)`);
+    } else if (t.startY > t.endY) {
+      const a = `(${t.startX}, ${t.startY})`, b = `(${t.endX}, ${t.endY})`;
+      [t.startX, t.endX] = [t.endX, t.startX];
+      [t.startY, t.endY] = [t.endY, t.startY];
+      swappedIds.add(t.id);
+      let extra = '';
+      if (t.dir === 'NORMAL' || t.dir === 'REVERSE') { t.dir = t.dir === 'NORMAL' ? 'REVERSE' : 'NORMAL'; extra = `, dir dibalik jadi ${t.dir}`; }
+      add(fixes, 'tracks', i, `${lbl('tracks', t)}: Start/End ditukar ${a} ↔ ${b}${extra}`);
+    }
+
+    if (coordsOk && t.startY === t.endY && t.startX !== t.endX) add(warns, 'tracks', i, `${lbl('tracks', t)}: track horizontal di data (startY = endY), game mengharapkan track vertikal`);
+    const spawnEnd = t.type === 'END' && (t.spawn === true || t.spawn === 'true');
+    if (t.spawn !== undefined && t.type !== 'END') add(warns, 'tracks', i, `${lbl('tracks', t)}: field "spawn" hanya berlaku untuk type END`);
+    if ((t.type === 'SPAWN' || spawnEnd) && coordsOk) {
+      const near = (ax, ay, bx, by) => Math.abs(ax - bx) < 0.002 && Math.abs(ay - by) < 0.002;
+      const nb = tracks.filter(o => o !== t && [[o.startX, o.startY], [o.endX, o.endY]].some(([x, y]) => near(x, y, t.startX, t.startY) || near(x, y, t.endX, t.endY)));
+      if (nb.length !== 1) add(warns, 'tracks', i, `${lbl('tracks', t)}: titik spawn harus tersambung ke tepat satu track (sekarang ${nb.length}), jika tidak tidak akan menjadi titik spawn`);
+    }
+    if (t.type !== undefined && !ENUM.type.tracks.includes(t.type)) add(errors, 'tracks', i, `${lbl('tracks', t)}: type "${t.type}" tidak valid (${ENUM.type.tracks.join('/')})`);
+    if (t.dir !== undefined && !ENUM.dir.includes(t.dir)) add(errors, 'tracks', i, `${lbl('tracks', t)}: dir "${t.dir}" tidak valid (${ENUM.dir.join('/')})`);
+    ['length', 'speed'].forEach(f => {
+      if (f in t && (!isNum(t[f]) || t[f] <= 0)) add(warns, 'tracks', i, `${lbl('tracks', t)}: ${f} sebaiknya angka > 0`);
+    });
+  });
+  const trackIds = new Set(tracks.map(t => t.id));
+  const needTrack = (k, o, i, field) => {
+    if (o[field] === undefined || o[field] === '') add(errors, k, i, `${lbl(k, o)}: "${field}" kosong`);
+    else if (!trackIds.has(o[field])) add(errors, k, i, `${lbl(k, o)}: ${field} = ${o[field]} tidak ada di daftar track`);
+  };
+
+  // ---- CROSSINGS ----
+  arr('crossings').forEach((cr, i) => {
+    coerce('crossings', cr, i, ['y', 'pad']);
+    if (!isNum(cr.y)) add(errors, 'crossings', i, `${lbl('crossings', cr)}: nilai y tidak valid`);
+    if (Array.isArray(cr.tracks)) {
+      cr.tracks.forEach(tid => {
+        if (!trackIds.has(tid)) add(warns, 'crossings', i, `${lbl('crossings', cr)}: merujuk track ID ${tid} yang tidak ada`);
+      });
+    }
+  });
+
+  // ---- Rake ----
+  arr('rakes').forEach((rk, i) => {
+    needTrack('rakes', rk, i, 'track');
+    if (swappedIds.has(rk.track)) {
+      if (isNum(rk.pos)) rk.pos = r3(1 - rk.pos);
+      if (rk.m === 'NORMAL' || rk.m === 'REVERSE') rk.m = rk.m === 'NORMAL' ? 'REVERSE' : 'NORMAL';
+      add(fixes, 'rakes', i, `${lbl('rakes', rk)}: pos/arah disesuaikan karena track ${rk.track} ditukar`);
+    }
+  });
+
+  // ---- SWITCHES & SIGNALS ----
+  const dupCheck = (k) => {
+    const seen = new Map();
+    arr(k).forEach((o, i) => {
+      if (o.id === undefined || o.id === '') { add(errors, k, i, `${KIND[k]} #${i + 1}: ID kosong`); return; }
+      if (seen.has(o.id)) add(errors, k, i, `${lbl(k, o)}: ID duplikat`);
+      else seen.set(o.id, i);
+    });
+  };
+  dupCheck('switches'); dupCheck('signals'); dupCheck('crossings');
+
+  arr('switches').forEach((o, i) => {
+    coerce('switches', o, i, ['x', 'y']);
+    if (!isNum(o.x) || !isNum(o.y)) add(errors, 'switches', i, `${lbl('switches', o)}: koordinat x/y tidak valid`);
+    ['normal', 'diverge'].forEach(f => {
+      const v = o[f];
+      if (v === undefined || v === null || v === '') add(warns, 'switches', i, `${lbl('switches', o)}: "${f}" belum diisi (dilewati)`);
+      else if (!trackIds.has(v)) add(errors, 'switches', i, `${lbl('switches', o)}: ${f} = ${v} tidak ada di daftar track`);
+    });
+    if (o.pair !== undefined && o.pair !== '') {
+      if (o.pair === o.id) add(errors, 'switches', i, `${lbl('switches', o)}: pair menunjuk dirinya sendiri`);
+      else if (!arr('switches').some(x => x.id === o.pair)) add(errors, 'switches', i, `${lbl('switches', o)}: pair "${o.pair}" tidak ada di daftar wesel`);
+    }
+    if (o.normal !== undefined && o.normal !== '' && o.normal === o.diverge) add(warns, 'switches', i, `${lbl('switches', o)}: normal dan diverge menunjuk track yang sama`);
+    if (o.state !== undefined && !ENUM.state.switches.includes(o.state)) add(errors, 'switches', i, `${lbl('switches', o)}: state "${o.state}" tidak valid`);
+  });
+
+  arr('signals').forEach((o, i) => {
+    coerce('signals', o, i, ['x', 'y']);
+    if (!isNum(o.x) || !isNum(o.y)) add(errors, 'signals', i, `${lbl('signals', o)}: koordinat x/y tidak valid`);
+    needTrack('signals', o, i, 'onTrack');
+    if (o.type !== undefined && !ENUM.type.signals.includes(o.type)) add(errors, 'signals', i, `${lbl('signals', o)}: type "${o.type}" tidak valid`);
+    if (o.state !== undefined && !ENUM.state.signals.includes(o.state)) add(errors, 'signals', i, `${lbl('signals', o)}: state "${o.state}" tidak valid`);
+    if (o.facing !== undefined && !ENUM.facing.includes(o.facing)) add(errors, 'signals', i, `${lbl('signals', o)}: facing "${o.facing}" tidak valid`);
+  });
+
+  // ---- topY/botY: platforms, building, stations ----
+  const stCodes = new Set(arr('stations').map(s => s.code));
+  ['platforms', 'building'].forEach(k => arr(k).forEach((o, i) => {
+    coerce(k, o, i, ['x', 'topY', 'botY']);
+    if (!isNum(o.topY) || !isNum(o.botY)) { add(errors, k, i, `${lbl(k, o)}: topY/botY tidak valid`); return; }
+    if (o.topY > o.botY) {
+      add(fixes, k, i, `${lbl(k, o)}: topY/botY ditukar (${o.topY} ↔ ${o.botY})`);
+      [o.topY, o.botY] = [o.botY, o.topY];
+    } else if (o.topY === o.botY) add(warns, k, i, `${lbl(k, o)}: topY sama dengan botY`);
+    if (k !== 'stations' && !isNum(o.x)) add(errors, k, i, `${lbl(k, o)}: x tidak valid`);
+  }));
+  arr('platforms').forEach((o, i) => {
+    needTrack('platforms', o, i, 'onTrack');
+    if (o.station && !stCodes.has(o.station)) add(warns, 'platforms', i, `${lbl('platforms', o)}: stasiun "${o.station}" tidak ada di daftar stations`);
+  });
+
+  // ---- SCHEDULES & LEGS ----
+  const platformOf = new Map();   // onTrack -> data peron
+  arr('platforms').forEach(p => platformOf.set(p.onTrack, p));
+  const bufferIds = new Set(tracks.filter(t => t.buffer === true || t.buffer === 'true').map(t => t.id));
+
+  // tT: angka atau array pilihan peron. Teks dirapikan ke angka, isi dicek ke daftar track.
+  const checkTT = (owner, i, where) => {
+    const v = owner.tT;
+    if (v === undefined) return;
+    if (typeof v === 'string') {
+      const p = parseTT(v);
+      if (p !== undefined) { owner.tT = p; add(fixes, 'schedules', i, `${where}: tT "${v}" dirapikan menjadi ${JSON.stringify(p)}`); }
+    }
+    const list = Array.isArray(owner.tT) ? owner.tT : [owner.tT];
+    if (Array.isArray(owner.tT)) {
+      const clean = [];
+      owner.tT.forEach(x => {
+        const n = toNum(x);
+        if (isNum(n) && !clean.includes(n)) clean.push(n);
+      });
+      if (clean.length !== owner.tT.length || clean.some((n, k) => n !== owner.tT[k])) {
+        add(fixes, 'schedules', i, `${where}: tT dirapikan menjadi ${JSON.stringify(clean)}`);
+        owner.tT = clean;
+      }
+      if (!owner.tT.length) { add(errors, 'schedules', i, `${where}: tT berupa daftar kosong`); return; }
+    }
+    const items = Array.isArray(owner.tT) ? owner.tT : [owner.tT];
+    items.forEach(id => {
+      if (!trackIds.has(id)) add(errors, 'schedules', i, `${where}: tT = ${id} tidak ada di daftar track`);
+    });
+    if (items.length > 1) {
+      items.forEach(id => {
+        if (trackIds.has(id) && !platformOf.has(id) && !bufferIds.has(id))
+          add(warns, 'schedules', i, `${where}: pilihan tT ${id} bukan track peron atau track ber-buffer`);
+      });
+      const st = new Set(items.filter(id => platformOf.has(id)).map(id => platformOf.get(id).station || ''));
+      if (st.size > 1) add(warns, 'schedules', i, `${where}: pilihan tT ${JSON.stringify(items)} berada di stasiun berbeda (${[...st].join(', ')})`);
+    }
+    return list;
+  };
+
+  arr('schedules').forEach((o, i) => {
+    const name = `Jadwal ${o.no ?? '#' + (i + 1)}`;
+    ['sT', 'xT'].forEach(f => {
+      if (o[f] !== undefined && !trackIds.has(o[f])) add(errors, 'schedules', i, `${name}: ${f} = ${o[f]} tidak ada di daftar track`);
+    });
+    checkTT(o, i, name);
+    if (Array.isArray(o.legs)) {
+      o.legs.forEach((leg, lgIdx) => checkTT(leg, i, `${name} (Leg #${lgIdx + 1})`));
+    }
+  });
+
+  if (JSON.stringify(D) !== before) {
+    undoStack.push(before);
+    if (undoStack.length > 60) undoStack.shift();
+    if (sel && !arr(sel.k)[sel.i]) sel = null;
+    renderProperties(); renderRakes(); draw();
+  }
+  return { fixes, errors, warns };
+}
+
+function focusObject(k, i) {
+  const o = arr(k)[i];
+  if (!o) return;
+  let wx, wy;
+  if (k === 'tracks') { wx = (o.startX + o.endX) / 2; wy = (o.startY + o.endY) / 2; }
+  else if (k === 'stations') { wx = 0.5; wy = (o.topY + o.botY) / 2; }
+  else if (k === 'crossings') { wx = 0.5; wy = o.y; }
+  else if (k === 'rakes') {
+    const t = arr('tracks').find(t => t.id === o.track);
+    if (!t) return;
+    const r = o.pos ?? 0.5; wx = t.startX + (t.endX - t.startX) * r; wy = t.startY + (t.endY - t.startY) * r;
+  } else if (k === 'platforms' || k === 'building') { wx = o.x; wy = (o.topY + o.botY) / 2; }
+  else { wx = o.x; wy = o.y; }
+  if (isFinite(wx) && isFinite(wy)) centerOn(wx, wy);
+  if (k !== 'schedules') { sel = { k, i }; renderProperties(); }
+  draw();
+}
+
+function showCompileResult(res) {
+  const { fixes, errors, warns } = res;
+  const chip = (txt, cls) => el('span', { className: `px-2 py-0.5 rounded-full font-semibold ${cls}` }, txt);
+  const sum = $('#compile-summary');
+  sum.innerHTML = '';
+  sum.append(
+    chip(`${errors.length} error`, errors.length ? 'bg-rose-600/30 text-rose-300' : 'bg-slate-700 text-slate-400'),
+    chip(`${warns.length} peringatan`, warns.length ? 'bg-amber-600/30 text-amber-300' : 'bg-slate-700 text-slate-400'),
+    chip(`${fixes.length} diperbaiki otomatis`, fixes.length ? 'bg-emerald-600/30 text-emerald-300' : 'bg-slate-700 text-slate-400')
+  );
+
+  const body = $('#compile-body');
+  body.innerHTML = '';
+  if (!errors.length && !warns.length && !fixes.length) {
+    body.append(el('div', { className: 'text-emerald-300 text-sm py-4 text-center' }, '✓ Tidak ada masalah. Semua track & crossing sudah valid.'));
+  }
+  const section = (title, items, color, icon) => {
+    if (!items.length) return;
+    body.append(el('div', { className: `font-semibold ${color} pt-1` }, `${title} (${items.length})`));
+    items.forEach(it => body.append(el('button', {
+      className: 'w-full text-left bg-slate-900/70 hover:bg-slate-700 border border-slate-700 rounded px-2.5 py-1.5 text-slate-200 transition',
+      onclick: () => { $('#compile-modal').classList.add('hidden'); $('#compile-modal').classList.remove('flex'); focusObject(it.k, it.i); }
+    }, `${icon} ${it.msg}`)));
+  };
+  section('Error', errors, 'text-rose-400', '✖');
+  section('Peringatan', warns, 'text-amber-400', '⚠');
+  section('Diperbaiki otomatis', fixes, 'text-emerald-400', '✔');
+  if (fixes.length) body.append(el('div', { className: 'text-slate-500 italic pt-1' }, 'Perubahan dapat dibatalkan dengan tombol Urungkan.'));
+
+  const m = $('#compile-modal');
+  m.classList.remove('hidden'); m.classList.add('flex');
+}
+
+function runCompile() {
+  let res;
+  try { res = compileProject(); }
+  catch (e) {
+    console.error(e);
+    showToast('Compile gagal: ' + e.message, true);
+    return;
+  }
+  showCompileResult(res);
+  if (res.errors.length) showToast(`Compile: ${res.errors.length} error ditemukan`, true);
+  else showToast(res.fixes.length ? `Compile selesai: ${res.fixes.length} perbaikan` : 'Compile selesai: tidak ada masalah');
+}
+
+$('#compile-btn').onclick = runCompile;
+$('#compile-rerun').onclick = runCompile;
+const closeCompile = () => { $('#compile-modal').classList.add('hidden'); $('#compile-modal').classList.remove('flex'); };
+$('#compile-close').onclick = closeCompile;
+$('#compile-ok').onclick = closeCompile;
+$('#compile-modal').addEventListener('pointerdown', e => { if (e.target.id === 'compile-modal') closeCompile(); });
+
+window.addEventListener('resize', resize);
+resize();
+renderProperties();
+renderWatermark();
+fit();
+</script>
+</body>
+</html>
